@@ -1,0 +1,170 @@
+/* --------------------------- Needed for Angular UI with Bootstrap */
+.nav, 
+.pagination, 
+.carousel, 
+.panel-title a { 
+    cursor: pointer; 
+}
+
+/* --------------------- Angular UI with Bootstrap Tooltips */
+.tooltip {
+  position: absolute;
+  z-index: 1030;
+  visibility: visible;
+  font-size: 0.5em;
+  line-height: 1.2;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  text-transform: uppercase;
+}
+.tooltip.in {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+.tooltip.bottom {
+  margin-top: (11/16)* -1em;
+  padding: ((5/16)*1em) 0;
+}
+.tooltip.top {
+  margin-top: ((13/16)* -1em);
+  padding: ((5/16)*1em) 0;
+}
+.tooltip-inner {
+  max-width: (200/16)*1em;
+  padding: (12/16)*1em (20/16)*1em;
+  color: $off-white;
+  text-align: center;
+  text-decoration: none;
+  background-color: $red;
+  -webkit-border-radius: (4/16)*1em;
+  -moz-border-radius: (4/16)*1em;
+  border-radius: (4/16)*1em;
+}
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+.tooltip.bottom .tooltip-arrow {
+  top: (1/18)*1em;
+  left: 50%;
+  margin-left: ((4/18)* -1em);
+  border-width: 0 ((5/18)*1em) ((5/18)*1em);
+  border-bottom-color: $red;
+}
+.tooltip.top .tooltip-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: ((4/18)* -1em);
+  border-width: ((5/18)*1em) ((5/18)*1em) 0;
+  border-top-color: $red;
+}
+
+/* ----------- Angular UI Fading Styles -- */
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity .15s linear;
+  -o-transition: opacity .15s linear;
+  transition: opacity .15s linear;
+}
+.fade.in {
+  opacity: 1;
+}
+
+
+/* ----------- Angular UI Modal Styles --*/
+.modal-open {
+  overflow: hidden;
+}
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  display: none;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+
+/* ------------ Angular UI Modal Dialog Styles --*/
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: (10/16)*1em;
+}
+.modal.fade .modal-dialog {
+  -webkit-transition: -webkit-transform .3s ease-out;
+  -o-transition: -o-transform .3s ease-out;
+  transition: transform .3s ease-out;
+  -webkit-transform: translate(0,-25%);
+  -ms-transform: translate(0,-25%);
+  -o-transform: translate(0,-25%);
+  transform: translate(0,-25%);
+}
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  -o-transform: translate(0,0);
+  transform: translate(0,0);
+}
+
+/* --------- Angular UI Modal Content Styles-- */
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #999;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: (6/16)*1em;
+  outline: 0;
+  -webkit-box-shadow: 0 ((3/16)*1em) ((9/16)*1em) rgba(0,0,0,.5);
+  box-shadow: 0 ((3/16)*1em) ((9/16)*1em) rgba(0,0,0,.5);
+}
+.modal-header {
+  min-height: (16.43/16)*1em;
+  padding: (15/16)*1em;
+  border-bottom: 1px solid #e5e5e5;
+}
+.modal-body {
+  position: relative;
+  padding: (15/16)*1em;
+}
+.modal-footer {
+  padding: (15/16)*1em;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+}
+.modal-title {
+  margin: 0;
+  font-size: (24/16)*1em;
+  line-height: (34/24)*1em;
+}
+
+
+/* ---------- Angular UI Modal Backdrop Styles --*/
+.modal-backdrop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #000;
+}
+.modal-backdrop.fade {
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+.modal-backdrop.in {
+  filter: alpha(opacity=50);
+  opacity: .5;
+}
