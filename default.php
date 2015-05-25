@@ -16,7 +16,7 @@
 
 <div class="content-area">
 
-	<div class="row frontpage-search">
+	<div class="frontpage-search">
 		<div class="col-sm-12">
 			<form id="search" role="search">
   				 <div class="input-group col-sm-4 center">
