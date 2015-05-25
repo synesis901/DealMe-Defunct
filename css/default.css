@@ -1,0 +1,41 @@
+.googlemapscanvas
+{
+	height: 500px;
+	width: 900px;
+}
+
+.content-area
+{
+	background-color:rgba(0,0,0,0.1);
+	margin-top: -80px;
+	min-height: 800px;
+}
+
+.center {
+	padding:10px;
+	margin: 0 auto;
+}
+
+.frontpage-search{
+	min-height: 50px;
+	background-color:rgba(0,0,0,0.5);
+}
+
+
+.footer-area
+{
+	background-color: rgba(25,52,65,0.75); 
+	min-height: 200px;
+}
+
+.jumbotron-mainpage {
+	min-height: 400px;
+}
+
+.footer-area {
+	color: white;
+}
+
+.footer-area a{
+	color: white;
+}
