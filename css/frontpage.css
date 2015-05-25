@@ -1,0 +1,15 @@
+.content-area-mainpage
+{
+	background-color:rgba(0,0,0,0.1);
+	margin-top: -80px;
+	min-height: 800px;
+}
+
+.frontpage-search{
+	min-height: 50px;
+	background-color:rgba(0,0,0,0.5);
+}
+
+.jumbotron-mainpage {
+	min-height: 400px;
+}

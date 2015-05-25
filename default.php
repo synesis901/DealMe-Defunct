@@ -1,8 +1,14 @@
 <?php
 	include ("php/header.php");
-	echo "Google Maps Test";
+	echo "DealMe";
 	include ("php/preload.php");
+	include ("php/Classes/Search/c_search.php");
+	echo "<link rel='stylesheet' type='text/css' href='css/frontpage.css'>";
 	include ("php/bodystart.php");
+	
+	//init objects
+	$searchResultsClass = new SearchResults();
+	
 ?>
 
 <!-- Main jumbotron for featuring items -->
@@ -14,7 +20,7 @@
 	</div>
 </div>
 
-<div class="content-area">
+<div class="content-area-mainpage">
 
 	<div class="frontpage-search">
 		<div class="col-sm-12">
@@ -30,8 +36,13 @@
 	</div><!-- Front Page Search div -->
 	
 	<div class="container">
-	
-
+		<div class="row">
+		<?php 
+			$searchResultsClass->initSearchResult(1,1);
+			$searchResultsClass->initSearchResult(1,1);
+			$searchResultsClass->initSearchResult(1,1);
+		?>
+		</div>
 	</div><!-- main information div -->
 
 </div><!-- .content-area -->
