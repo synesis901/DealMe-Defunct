@@ -21,6 +21,10 @@
 </div>
 
 <div class="content-area-mainpage">
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of f1c23fa... Adding Advanced Search
 	<div class="frontpage-search">
 		<div class="col-sm-12">
 			<form id="search" role="search">
