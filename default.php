@@ -21,7 +21,6 @@
 </div>
 
 <div class="content-area-mainpage">
-
 	<div class="frontpage-search">
 		<div class="col-sm-12">
 			<form id="search" role="search">
