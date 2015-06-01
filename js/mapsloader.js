@@ -81,6 +81,7 @@ $(document).ready(function(){
 	
 	//initMapCurrentLocation($('#googleMapsCanvas'));
 	//init the google map
+	/*
 	$.getJSON( 'testdata/test.json', function(data) { 
 		initMarkersToMapsJSON(data, $('#googleMapsCanvas'));
 		
@@ -98,5 +99,5 @@ $(document).ready(function(){
 	.always(function() {
 	
 	});
-	
+	*/
 });
