@@ -77,17 +77,60 @@ function setDrag(object, bool)
 		object.gmap('get', 'map').set('draggable', false);	
 }
 
+function setScollWheel(object, bool)
+{
+	
+	if(object.gmap('get', 'map') == undefined)
+		initMapCurrentLocation(object);
+		
+	if(bool)
+		object.gmap('get', 'map').set('scrollwheel', true);
+	else
+		object.gmap('get', 'map').set('scrollwheel', false);	
+}
+
 $(document).ready(function(){
 	
 	//initMapCurrentLocation($('#googleMapsCanvas'));
 	//init the google map
-	/*
-	$.getJSON( 'testdata/test.json', function(data) { 
+	
+	//modal code?
+	$('#searchModal').on('shown.bs.modal', function (event) {
+		
+		//alert('modal');
+
+		$.getJSON( '/DealMeMVP/js/mapsloaderExampleFiles/sample.json', function(data) { 
+			initMarkersToMapsJSON(data, $('#googleMapsModal'));
+			
+		}) 
+		.done(function() {
+			setDrag($('#googleMapsModal'), false);
+			setScollWheel($('#googleMapsModal'), false);
+			$('#googleMapsModal').gmap('get', 'map').addListener('dragend', function()
+			{
+				updateMarkersToMap($('#googleMapsModal'));
+			});
+			$('#googleMapsCanvas').gmap('refresh');
+			
+		})
+		.fail(function() {
+			alert('Error - Fail to Retrieve Information');
+		})
+		.always(function() {
+		
+		});
+		
+	});
+	
+
+	
+	$.getJSON( '/DealMeMVP/js/mapsloaderExampleFiles/sample.json', function(data) { 
 		initMarkersToMapsJSON(data, $('#googleMapsCanvas'));
 		
 	}) 
 	.done(function() {
 		setDrag($('#googleMapsCanvas'), false);
+		setScollWheel($('#googleMapsCanvas'), false);
 		$('#googleMapsCanvas').gmap('get', 'map').addListener('dragend', function()
 		{
 			updateMarkersToMap($('#googleMapsCanvas'));
@@ -99,5 +142,5 @@ $(document).ready(function(){
 	.always(function() {
 	
 	});
-	*/
+	
 });
