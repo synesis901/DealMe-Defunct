@@ -23,17 +23,18 @@
 
 <div class="content-area-mainpage">
 	<div class="Search-Area" id="Search-Area">
-		<div class="row frontpage-search">
+		<div class="row top-content">
 			<div class="col-sm-12">
 				<div class="col-sm-4"></div>
 				<form id="search" role="search" class="form-inline">
-	  				 <div class="input-group col-sm-4 center">
+	  				 <div class="input-group col-sm-5 center">
+	  				 	<div class="input-group-addon" data-toggle="collapse" id="Adv-Search-Area-Button" data-target="#Adv-Search"><span class="caret"></span></div>
 	      				<input type="text" class="form-control" placeholder="Search for...">
 	      				<span class="input-group-btn">
 	        				<button class="btn btn-default" type="button">Search</button>
 	      				</span>
+	      				
 	   	 			</div><!-- /input-group -->
-	   	 			<span data-toggle="collapse" id="Adv-Search-Area-Button" data-target="#Adv-Search" class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 	   	 		</form>
 			</div>
 		</div>

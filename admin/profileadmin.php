@@ -4,6 +4,7 @@
 	echo ($_SERVER['DOCUMENT_ROOT']);
 	include ($_SERVER['DOCUMENT_ROOT']."/DealMeMVP/php/preload.php");
 	echo "<link rel='stylesheet' type='text/css' href='/DealMeMVP/css/admin.css'>";
+	echo "<script src='admin.js'></script>";
 	include ($_SERVER['DOCUMENT_ROOT']."/DealMeMVP/php/Classes/Search/c_search.php");
 	include ($_SERVER['DOCUMENT_ROOT']."/DealMeMVP/php/bodystartadmin.php");
 	
@@ -49,6 +50,4 @@ Quisque ut dignissim lorem, vitae aliquam arcu. Lorem ipsum dolor sit amet, cons
 
 
 <!--  test -->
-<?php 
-include($_SERVER['DOCUMENT_ROOT']."/DealMeMVP/php/footer.php");
-?>
+</body>
