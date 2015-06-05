@@ -1,0 +1,78 @@
+<?php
+/*
+	Sends Various emails for DealMe
+*/
+
+class m_Email {
+	/*
+		Properties
+	*/
+	private $headers;
+	
+	/*
+		Methods
+	*/
+	private function build_headers(){
+		// To send HTML mail, the Content-type header must be set
+		$this->headers  = 'MIME-Version: 1.0' . "\r\n";
+		$this->headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+
+		// Additional headers
+		//$this->headers .= 'To: No-Reply DealMe <noreply@dealme.link>' . "\r\n";
+		$this->headers .= 'From: No-Reply DealMe <noreply@dealme.link>' . "\r\n";
+		//$this->headers .= 'Cc: No-Reply DealMe <noreply@dealme.link>' . "\r\n";
+		//$this->headers .= 'Bcc: No-Reply DealMe <noreply@dealme.link>' . "\r\n";
+	}
+	
+	
+	public static function registration($to,$username,$verification){
+		$this->build_headers();
+		$subject = 'DealMe - Welcome to DealMe';
+		$message = "
+			<html>
+			<head><title>DealMe - E-Mail Verification</title></head>
+			<body>
+			<h1>Welcome to DealMe!</h1>
+			
+			<p>You have received this email because you have registered a user account at DealMe. Thank you for that.</p>
+			<br/>
+			<p>Just as reminder your user name is, ".$username.".</p>
+			<br/>
+			<p><a href='http://dealme.link/test/verification.php?v=".$verification."'>Click Here</a> to validate your account. If the link doesn't work, copy the line below and paste it into the URL bar at the top.</p>
+			<br/>
+			<p>http://dealme.link/test/verification.php?v=".$verification."</p>
+			<br/>
+			<p>Thank you for reading this email and for registering with DealMe.</p>
+			<br/>
+			<p>DealMe Team</p>
+			</body>
+			</html>
+			";
+		return mail($to,$subject,$message,$this->headers);
+	}
+	
+	public static function recovery($to,$user,$hashed){
+		$this->build_headers();
+		$subject = 'DealMe - E-Mail Recovery';
+		$message = "
+			<html>
+			<head><title>DealMe - E-Mail Recovery Message</title></head>
+			<body>
+			<p>You have received this email because you (or someone else) used DealMe's Account Recovery section.</p>
+			<br/>
+			<p>If this was you, your User Name is, ".$user."</p>
+			<p><a href='http://dealme.link/test/recover.php?b=".$hashed."'>Click Here</a> to change your password.</p>
+			<br/>
+			<p>If you did not authorize a Password Change via the Account Recovery section of DealMe, <a href='http://dealme.link/test/recover.php?b=".$hashed."&c=cancel'>Click Here</a> to cancel the Password Timer.</p>
+			<br/>
+			<p>Thank you for reading this email and for using DealMe.</p>
+			<br/>
+			<p>DealMe Team</p>
+			</body>
+			</html>
+		";
+		return mail($to,$subject,$message,$this->headers);
+	}
+}
+
+?>

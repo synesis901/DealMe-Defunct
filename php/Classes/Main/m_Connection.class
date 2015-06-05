@@ -1,0 +1,57 @@
+<?php
+/*
+	DealMe Classes that handle the communication to the mongo database
+*/
+
+/*
+	The main DealMe Mongo Database Class connection
+*/
+class m_Connection {
+	/*
+		Static Variables
+	*/
+	private static $user = "string";
+	private static $pass = "string";
+	private static $host = "localhost";
+	private static $port = ":27017";
+	private static $prefix = "mongodb://";
+	private static $connection;
+	
+	
+	/*
+		protect this static class from instantiation
+	*/
+	private function __clone(){}
+	private function __wakeup(){}
+	protected function __construct(){}
+	
+	/*
+		Here starts the actual code
+		Establishes the MongoDB Connection
+	*/
+	public static function connect(){
+		/*
+			$prefix [$user : $pass @] $host $port [, host2, ...host[X]]
+		*/
+		self::$connection = new MongoClient( self::$prefix . self::$host . self::$port );
+	}
+	
+	/*
+		Using the Mongo Database
+		db->connect() will show if connection succeeded or failed (1 or 0)
+	*/
+	public static function connection(){
+		return self::$connection;
+	}
+	
+	/*
+		Closing the MongoDB Connection
+	*/
+	public static function close(){
+		self::$connection->close();
+	}
+}
+
+// starting the Mongo Connection
+m_Connection::connect();
+?>

@@ -1,0 +1,30 @@
+<?php
+/*
+	DealMe Save class for Mongo Save Method
+*/
+
+class m_Find extends m_Connection{
+	private static $results = array();
+
+	/*
+		protect this static class from instantiation
+	*/
+	private function __clone(){}
+	private function __wakeup(){}
+	protected function __construct(){}
+	
+	/*
+		Methods
+	*/
+	public static function result($database,$collection,$query){
+		$hold = parent::connection()->$database->$collection->find($query);
+		foreach($hold as $doc){
+			array_push(self::$results,$doc);
+		}
+	}
+	
+	public static function get_results(){
+		return self::$results;
+	}
+}
+?>
