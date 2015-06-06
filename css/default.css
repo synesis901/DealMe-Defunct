@@ -1,3 +1,9 @@
+/*DealMeLightBlue1 - hex= #50C4CA rgb= 56,196,202
+DealMeLightBlue2 - hex= #33B2C3 rgb= 51,178,195
+DealMeBlue - hex= #15A5BD rgb= 21,165,189;
+DealMeDarkBlue - hex= #1A98B8 rgb= 26,152,184;
+DealMeWhite - hex= #FFFFFF rgb= 255,255,255;
+*/
 .googleMapsCanvas
 {
 	margin-top: 10px;
@@ -13,14 +19,14 @@
 
 .top-content
 {
-	background-color:rgba(0,0,0,0.5);
+	background-color:rgba(26,152,184,0.5);
 	min-height: 50px;
 	color: white;
 }
 
 .content-area
 {
-	background-color:rgba(0,0,0,0.1);
+	background-color:rgba(21,165,189,0.2);
 	margin-top: -30px;
 	min-height: 800px;
 }
@@ -32,7 +38,7 @@
 
 .footer-area
 {
-	background-color: rgba(25,52,65,0.75); 
+	background-color: rgba(26,152,184,0.9); 
 	min-height: 200px;
 }
 
@@ -56,4 +62,9 @@
 div.Search-Area label{
 	width: 100%;
 	height: 100%;
-}s
+}
+
+.main-content-bg{
+	padding: 10px;
+	background-color: rgba(255,255,255,0.75);	
+}

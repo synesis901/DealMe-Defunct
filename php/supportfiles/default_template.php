@@ -26,7 +26,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="container">
+	<div class="container main-content-bg">
 		<div class="row">
 			<div class="col-sm-12">
 				<h1>Main Content Area</h1>

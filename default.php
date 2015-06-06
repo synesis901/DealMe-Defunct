@@ -84,7 +84,7 @@
 		</div>
 	</div><!-- Front Page Search div -->
 	
-	<div class="container">
+	<div class="container main-content-bg">
 		<div class="row">
 		<?php 
 			$searchResultsClass->initSearchResult(1,1);
