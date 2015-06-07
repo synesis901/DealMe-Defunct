@@ -72,6 +72,11 @@
 			  	</div>
 			  	
 			  	<div class="form-group">
+			    	<label for="location">Town/City</label>
+			    	<input type="text" name="location" class="form-control" id="inputlocation" placeholder="Where do you hail?" required>
+			  	</div>
+			  	
+			  	<div class="form-group">
 			    	<label for="password">Password</label>
 			    	<input type="password" class="form-control" id="inputPassword" placeholder="Enter Password" required>
 			  		<div class="help-block with-errors"></div>
@@ -83,7 +88,9 @@
 			  		<div class="help-block with-errors"></div>
 			  	</div>
 				
-				<button type="submit" class="btn btn-default" formmethod="post" formtarget="#">Submit</button>
+				
+				<input type="hidden" name="switch" value="registration">
+				<button type="submit" form="form" formaction="php/register.php" formmethod="post" class="btn btn-default">Submit</button>
 			</form>
 		</div>
   		</div>
