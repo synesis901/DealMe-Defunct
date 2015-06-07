@@ -66,35 +66,13 @@
 			  	</div>
 			  	
 				<div class="form-group">
-			    	<label for="username">Username</label>
-			    	<input type="text" class="form-control" id="username" placeholder="Enter Username" required>
-			  		<div class="help-block with-errors"></div>
-			  	</div>
-			  	
-				<div class="form-group">
 			    	<label for="email">Email address</label>
 			    	<input type="email" class="form-control" id="inputemail" placeholder="Enter Email" data-error="Invalid E-mail" required>
 			  		<div class="help-block with-errors"></div>
-	      	<form id="form">
-				<div class="form-group">
-			    	<label for="display-name">Display Name</label>
-			    	<input type="text" name="name" class="form-control" id="display-name" placeholder="Enter Display Name">
-			  	</div>
-			  	
-				<div class="form-group">
-			    	<label for="email">Email Address</label>
-			    	<input type="email" name="email" class="form-control" id="email" placeholder="Enter Email">
-			  	</div>
-			  	
-			  	<div class="form-group">
-			    	<label for="email2">Confirm Email Address</label>
-			    	<input type="email" name="email2" class="form-control" id="email2" placeholder="Confirm Email">
->>>>>>> origin/master
 			  	</div>
 			  	
 			  	<div class="form-group">
 			    	<label for="password">Password</label>
-<<<<<<< HEAD
 			    	<input type="password" class="form-control" id="inputPassword" placeholder="Enter Password" required>
 			  		<div class="help-block with-errors"></div>
 			  	</div>
