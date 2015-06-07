@@ -1,6 +1,9 @@
 <?php
 /*5hrs
 	DealMe UserAccount class
+	
+	Usage Examples at bottom of page
+	
 	Handles everything that deals with Users Accounts:
 		Creating a new account
 		Finding account info

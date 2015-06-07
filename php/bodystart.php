@@ -70,12 +70,12 @@
 			  	</div>
 			  	
 				<div class="form-group">
-			    	<label for="email">Email address</label>
+			    	<label for="email">Email Address</label>
 			    	<input type="email" class="form-control" id="email" placeholder="Enter Email">
 			  	</div>
 			  	
 			  	<div class="form-group">
-			    	<label for="email">Confirm Email address</label>
+			    	<label for="email">Confirm Email Address</label>
 			    	<input type="email" class="form-control" id="email" placeholder="Confirm Email">
 			  	</div>
 			  	
@@ -85,7 +85,7 @@
 			  	</div>
 			  	
 			  	<div class="form-group">
-			    	<label for="password">Confirm PasswordPassword</label>
+			    	<label for="password">Confirm Password</label>
 			    	<input type="password" class="form-control" id="password" placeholder="Confirm Password">
 			  	</div>
 				
