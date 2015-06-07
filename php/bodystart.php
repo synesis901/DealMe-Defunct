@@ -58,7 +58,7 @@
 		        <h4 class="modal-title" id="myModalLabel">Sign Up</h4>
 		    </div>
 		<div class="modal-body">
-	      	<form data-toggle="validator" role="form">
+	      	<form data-toggle="validator" role="form" id="form">
 				<div class="form-group">
 			    	<label for="display-name">Display Name</label>
 			    	<input type="text" class="form-control" id="display-name" name="name" placeholder="Enter Display Name" required>
