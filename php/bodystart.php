@@ -83,7 +83,7 @@
 			  	</div>
 			  	
 			  	<div class="form-group">
-			    	<label for="password">Confirm PasswordPassword</label>
+			    	<label for="password">Confirm Password</label>
 			    	<input type="password" class="form-control" id="passwordConfirm" data-match="#inputPassword" data-match-error="Password does not match" placeholder="Enter Password" required>
 			  		<div class="help-block with-errors"></div>
 			  	</div>
