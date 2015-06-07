@@ -17,5 +17,5 @@ $UA['Location'] = isset($_POST['location'])? $_POST['location']: "";
 $UAT = new m_UserAccount();
 $UAT->newuser($UA);
 $UAT->save();
-echo $UAT->get_error();
+echo $UAT->get_error(); 
 ?>
