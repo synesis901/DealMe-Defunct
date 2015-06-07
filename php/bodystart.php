@@ -58,38 +58,38 @@
 		        <h4 class="modal-title" id="myModalLabel">Sign Up</h4>
 		    </div>
 		<div class="modal-body">
-	      	<form>
+	      	<form id="form">
 				<div class="form-group">
 			    	<label for="display-name">Display Name</label>
-			    	<input type="text" class="form-control" id="display-name" placeholder="Enter Display Name">
-			  	</div>
-			  	
-				<div class="form-group">
-			    	<label for="username">Username</label>
-			    	<input type="text" class="form-control" id="username" placeholder="Enter Username">
+			    	<input type="text" name="name" class="form-control" id="display-name" placeholder="Enter Display Name">
 			  	</div>
 			  	
 				<div class="form-group">
 			    	<label for="email">Email Address</label>
-			    	<input type="email" class="form-control" id="email" placeholder="Enter Email">
+			    	<input type="email" name="email" class="form-control" id="email" placeholder="Enter Email">
 			  	</div>
 			  	
 			  	<div class="form-group">
-			    	<label for="email">Confirm Email Address</label>
-			    	<input type="email" class="form-control" id="email" placeholder="Confirm Email">
+			    	<label for="email2">Confirm Email Address</label>
+			    	<input type="email" name="email2" class="form-control" id="email2" placeholder="Confirm Email">
 			  	</div>
 			  	
 			  	<div class="form-group">
 			    	<label for="password">Password</label>
-			    	<input type="password" class="form-control" id="password" placeholder="Enter Password">
+			    	<input type="password" name="pass" class="form-control" id="password" placeholder="Enter Password">
 			  	</div>
 			  	
 			  	<div class="form-group">
-			    	<label for="password">Confirm Password</label>
-			    	<input type="password" class="form-control" id="password" placeholder="Confirm Password">
+			    	<label for="password2">Retype Password</label>
+			    	<input type="password" name="pass2" class="form-control" id="password2" placeholder="Confirm Password">
 			  	</div>
-				
-				<button type="submit" class="btn btn-default">Submit</button>
+			  	
+			  	<div class="form-group">
+			    	<label for="location">Town/City</label>
+			    	<input type="texy" name="location" class="form-control" id="location" placeholder="Where do you hail?">
+			  	</div>
+				<input type="hidden" name="switch" value="registration">
+				<button type="submit" form="form" formaction="php/register.php" formmethod="post" class="btn btn-default">Submit</button>
 			</form>
 		</div>
   		</div>
