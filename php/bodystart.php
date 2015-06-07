@@ -58,38 +58,38 @@
 		        <h4 class="modal-title" id="myModalLabel">Sign Up</h4>
 		    </div>
 		<div class="modal-body">
-	      	<form>
+	      	<form data-toggle="validator" role="form">
 				<div class="form-group">
 			    	<label for="display-name">Display Name</label>
-			    	<input type="text" class="form-control" id="display-name" placeholder="Enter Display Name">
+			    	<input type="text" class="form-control" id="display-name" placeholder="Enter Display Name" required>
+			    	<div class="help-block with-errors"></div>
 			  	</div>
 			  	
 				<div class="form-group">
 			    	<label for="username">Username</label>
-			    	<input type="text" class="form-control" id="username" placeholder="Enter Username">
+			    	<input type="text" class="form-control" id="username" placeholder="Enter Username" required>
+			  		<div class="help-block with-errors"></div>
 			  	</div>
 			  	
 				<div class="form-group">
-			    	<label for="email">Email Address</label>
-			    	<input type="email" class="form-control" id="email" placeholder="Enter Email">
-			  	</div>
-			  	
-			  	<div class="form-group">
-			    	<label for="email">Confirm Email Address</label>
-			    	<input type="email" class="form-control" id="email" placeholder="Confirm Email">
+			    	<label for="email">Email address</label>
+			    	<input type="email" class="form-control" id="inputemail" placeholder="Enter Email" data-error="Invalid E-mail" required>
+			  		<div class="help-block with-errors"></div>
 			  	</div>
 			  	
 			  	<div class="form-group">
 			    	<label for="password">Password</label>
-			    	<input type="password" class="form-control" id="password" placeholder="Enter Password">
+			    	<input type="password" class="form-control" id="inputPassword" placeholder="Enter Password" required>
+			  		<div class="help-block with-errors"></div>
 			  	</div>
 			  	
 			  	<div class="form-group">
-			    	<label for="password">Confirm Password</label>
-			    	<input type="password" class="form-control" id="password" placeholder="Confirm Password">
+			    	<label for="password">Confirm PasswordPassword</label>
+			    	<input type="password" class="form-control" id="passwordConfirm" data-match="#inputPassword" data-match-error="Password does not match" placeholder="Enter Password" required>
+			  		<div class="help-block with-errors"></div>
 			  	</div>
 				
-				<button type="submit" class="btn btn-default">Submit</button>
+				<button type="submit" class="btn btn-default" formmethod="post" formtarget="#">Submit</button>
 			</form>
 		</div>
   		</div>

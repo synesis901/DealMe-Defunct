@@ -1,8 +1,9 @@
 <?php
-	include("php/Classes/Main/class.php");
+	//include("php/Classes/Main/class.php");
 	include ("php/header.php");
 	echo "DealMe";
 	include ("php/preload.php");
+	
 	include ("php/Classes/Search/c_search.php");
 	echo "<link rel='stylesheet' type='text/css' href='css/frontpage.css'>";
 	include ("php/bodystart.php");

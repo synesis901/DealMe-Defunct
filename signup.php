@@ -26,39 +26,7 @@
 			<div class="col-sm-6">
 				<h1 class="page-header">Sign Up</h1>
 				
-				<form>
-					<div class="form-group">
-				    	<label for="display-name">Display Name</label>
-				    	<input type="text" class="form-control" id="display-name" placeholder="Enter Display Name">
-				  	</div>
-				  	
-					<div class="form-group">
-				    	<label for="username">Username</label>
-				    	<input type="text" class="form-control" id="username" placeholder="Enter Username">
-				  	</div>
-				  	
-					<div class="form-group">
-				    	<label for="email">Email address</label>
-				    	<input type="email" class="form-control" id="email" placeholder="Enter Email">
-				  	</div>
-				  	
-				  	<div class="form-group">
-				    	<label for="email">Confirm Email address</label>
-				    	<input type="email" class="form-control" id="email" placeholder="Confirm Email">
-				  	</div>
-				  	
-				  	<div class="form-group">
-				    	<label for="password">Password</label>
-				    	<input type="password" class="form-control" id="password" placeholder="Enter Password">
-				  	</div>
-				  	
-				  	<div class="form-group">
-				    	<label for="password">Confirm PasswordPassword</label>
-				    	<input type="password" class="form-control" id="password" placeholder="Confirm Password">
-				  	</div>
-					
-					<button type="submit" class="btn btn-default">Submit</button>
-				</form>
+				
 				<?php 
 					//display name, username, email, and password
 				?>

@@ -8,7 +8,9 @@ session_start();
 if(!isset($_SESSION['login'])){
 $_SESSION['login'] = "";
 }
-//Mongo-PHP method classes
+
+//Mongo-PHP method classes - local to kyle only atm - will need to fix later
+
 require("m_Connection.class");
 require("m_var.class");
 require("m_FindOne.class");

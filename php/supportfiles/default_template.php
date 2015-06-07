@@ -3,6 +3,7 @@
 	echo "DealMe";
 	echo ($_SERVER['DOCUMENT_ROOT']);
 	include ($_SERVER['DOCUMENT_ROOT']."/DealMeMVP/php/preload.php");
+	include($_SERVER['DOCUMENT_ROOT']."/DealMeMVP/php/Classes/Main/class.php");
 	include ($_SERVER['DOCUMENT_ROOT']."/DealMeMVP/php/Classes/Search/c_search.php");
 	include ($_SERVER['DOCUMENT_ROOT']."/DealMeMVP/php/bodystart.php");
 	
