@@ -50,6 +50,4 @@ Quisque ut dignissim lorem, vitae aliquam arcu. Lorem ipsum dolor sit amet, cons
 
 
 <!--  test -->
-<?php 
-include($_SERVER['DOCUMENT_ROOT']."/DealMeMVP/php/footer.php");
-?>
+</body>

@@ -28,6 +28,9 @@
 			<!-- Right hand side nav -->
 			<ul class="nav navbar-nav navbar-right">
 				<!-- add php logic here -->
+				<li>
+					<a href="#" data-toggle="modal" data-target="#signup-Modal">Sign Up</a>
+				</li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">User Account<span class="caret"></span></a>
 					<ul class="dropdown-menu" role="menu">
@@ -44,3 +47,51 @@
 	</div>
 
 </nav>
+
+<!-- Modal Stuff for nav -->
+
+<div class="modal fade" id="signup-Modal" tabindex="-1" role="dialog" aria-labelledby="signup-Modal" aria-hidden="true">
+	<div class="modal-dialog">
+    	<div class="modal-content">
+      		<div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">Sign Up</h4>
+		    </div>
+		<div class="modal-body">
+	      	<form>
+				<div class="form-group">
+			    	<label for="display-name">Display Name</label>
+			    	<input type="text" class="form-control" id="display-name" placeholder="Enter Display Name">
+			  	</div>
+			  	
+				<div class="form-group">
+			    	<label for="username">Username</label>
+			    	<input type="text" class="form-control" id="username" placeholder="Enter Username">
+			  	</div>
+			  	
+				<div class="form-group">
+			    	<label for="email">Email address</label>
+			    	<input type="email" class="form-control" id="email" placeholder="Enter Email">
+			  	</div>
+			  	
+			  	<div class="form-group">
+			    	<label for="email">Confirm Email address</label>
+			    	<input type="email" class="form-control" id="email" placeholder="Confirm Email">
+			  	</div>
+			  	
+			  	<div class="form-group">
+			    	<label for="password">Password</label>
+			    	<input type="password" class="form-control" id="password" placeholder="Enter Password">
+			  	</div>
+			  	
+			  	<div class="form-group">
+			    	<label for="password">Confirm PasswordPassword</label>
+			    	<input type="password" class="form-control" id="password" placeholder="Confirm Password">
+			  	</div>
+				
+				<button type="submit" class="btn btn-default">Submit</button>
+			</form>
+		</div>
+  		</div>
+	</div>
+</div>

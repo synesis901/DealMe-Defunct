@@ -67,4 +67,5 @@ div.Search-Area label{
 .main-content-bg{
 	padding: 10px;
 	background-color: rgba(255,255,255,0.75);	
+	min-height: 800px;
 }
