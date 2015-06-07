@@ -61,30 +61,30 @@
 	      	<form data-toggle="validator" role="form">
 				<div class="form-group">
 			    	<label for="display-name">Display Name</label>
-			    	<input type="text" class="form-control" id="display-name" placeholder="Enter Display Name" required>
+			    	<input type="text" class="form-control" id="display-name" name="name" placeholder="Enter Display Name" required>
 			    	<div class="help-block with-errors"></div>
 			  	</div>
 			  	
 				<div class="form-group">
 			    	<label for="email">Email address</label>
-			    	<input type="email" class="form-control" id="inputemail" placeholder="Enter Email" data-error="Invalid E-mail" required>
+			    	<input type="email" class="form-control" id="inputemail" name="email" placeholder="Enter Email" data-error="Invalid E-mail" required>
 			  		<div class="help-block with-errors"></div>
 			  	</div>
 			  	
 			  	<div class="form-group">
 			    	<label for="location">Town/City</label>
-			    	<input type="text" name="location" class="form-control" id="inputlocation" placeholder="Where do you hail?" required>
+			    	<input type="text" name="location" class="form-control" name="Where" id="inputlocation" placeholder="Where do you hail?" required>
 			  	</div>
 			  	
 			  	<div class="form-group">
 			    	<label for="password">Password</label>
-			    	<input type="password" class="form-control" id="inputPassword" placeholder="Enter Password" required>
+			    	<input type="password" class="form-control"  name="pass" id="inputPassword" placeholder="Enter Password" required>
 			  		<div class="help-block with-errors"></div>
 			  	</div>
 			  	
 			  	<div class="form-group">
 			    	<label for="password">Confirm PasswordPassword</label>
-			    	<input type="password" class="form-control" id="passwordConfirm" data-match="#inputPassword" data-match-error="Password does not match" placeholder="Enter Password" required>
+			    	<input type="password" class="form-control" id="passwordConfirm" name="pass2" data-match="#inputPassword" data-match-error="Password does not match" placeholder="Enter Password" required>
 			  		<div class="help-block with-errors"></div>
 			  	</div>
 				
