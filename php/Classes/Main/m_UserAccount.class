@@ -142,7 +142,7 @@ class m_UserAccount{
 	}
 	
 	public function newuser($array){
-		if($newUser){
+		if($this->newUser){
 			//Password Match
 			$this->password_match($array['Password'],$array['Password2']);
 			
