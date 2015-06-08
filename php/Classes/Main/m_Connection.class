@@ -12,7 +12,7 @@ class m_Connection {
 	*/
 	private static $user = "string";
 	private static $pass = "string";
-	private static $host = "localhost";
+	private static $host = "107.170.111.23";//"localhost";
 	private static $port = ":27017";
 	private static $prefix = "mongodb://";
 	private static $connection;
