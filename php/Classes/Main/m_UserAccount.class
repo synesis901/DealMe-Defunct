@@ -23,9 +23,9 @@ class m_UserAccount{
 	*/
 	private $accountProperties = array(
 	'_id'=>'',
-	'email'=>'',
 	'name'=>'',
 	'password'=>'',
+	'location'=>'',
 	'valid'=>'',
 	'joindate'=>'',
 	'lastlogin'=>'',
@@ -82,7 +82,7 @@ class m_UserAccount{
 			
 			if($this->newUser){
 				m_Save::result(m_var::get_database(),m_var::get_userAccount(),$hold);
-				if(!m_Email::registration($hold['email'],$hold['_id'],$hold['valid'])){
+				if(!m_Email::registration($hold['_id'],$hold['valid'])){
 					$this->error("verification");
 				}
 			}else{
@@ -110,7 +110,7 @@ class m_UserAccount{
 	
 	private function email_match($email1,$email2){
 		if(strcmp($email1,$email2) == 0){
-			$this->accountProperties['email'] = $email1;
+			$this->accountProperties['_id'] = $email1;
 		}else{
 			$this->error("eMatch");
 		}
@@ -120,25 +120,18 @@ class m_UserAccount{
 		if(filter_var($email,FILTER_VALIDATE_EMAIL) == false){
 			$this->error("eFilter");
 		}else{
-			$this->accountProperties['email'] = $email;
+			$this->accountProperties['_id'] = $email;
 		}
 	}
 	
 	private function email_inuse($email){
-		if(m_FindOne::result(m_var::get_database(),m_var::get_userAccount(),array('email'=>$email)) == NULL){
-			$this->accountProperties['email'] = $email;
+		if(m_FindOne::result(m_var::get_database(),m_var::get_userAccount(),array('_id'=>$email)) == NULL){
+			$this->accountProperties['_id'] = $email;
 		}else{
 			$this->error("emailTaken");
 		}
 	}
 	
-	private function user_check($username){
-		if(m_FindOne::result(m_var::get_database(),m_var::get_userAccount(),array('_id'=>$username)) == NULL){
-			$this->accountProperties['_id'] = $username;
-		}else{
-			$this->error("usertaken");
-		}
-	}
 	private function blank_check($array){
 		foreach($array as $key => $value){
 			if(empty($value)){
@@ -149,23 +142,23 @@ class m_UserAccount{
 	}
 	
 	public function newuser($array){
-		if($newUser){
+		if($this->newUser){
 			//Password Match
 			$this->password_match($array['Password'],$array['Password2']);
 			
 			//Email
-			$this->email_match($array['Email'],$array['Email2']);
+			//$this->email_match($array['Email'],$array['Email2']);
 			$this->email_inuse($array['Email']);
 			$this->email_validate($array['Email']);
 			
-			//Username Taken
-			$this->user_check($array['Username']);
-			
-			// Blank Entries
-			$this->blank_check($array);
+			//Location
+			$this->accountProperties['location'] = $array['Location'];
 			
 			// Add Name
 			$this->accountProperties['name'] = $array['Name'];
+			
+			// Blank Entries
+			$this->blank_check($array);
 		}else{
 			$this->error("newuser_validation");
 		}
@@ -209,7 +202,7 @@ class m_UserAccount{
 			break;
 			
 			case "emailTaken":
-			$this->eHold .= "Email Address is use. Use a different one or perform a password recovery[link].<br>";
+			$this->eHold .= "Email Address is in use<br>";
 			break;
 			
 			case "newuser_validation":
@@ -228,7 +221,6 @@ class m_UserAccount{
 }
 /*New User Test
 $UA = array();
-$UA['Username'] = isset($_POST['username'])?$_POST['username'] : "";
 $UA['Password'] = isset($_POST['password'])?$_POST['password'] : "";
 $UA['Password2'] = isset($_POST['password2'])?$_POST['password2'] : "";
 $UA['Name'] = isset($_POST['name'])? $_POST['name']: "";

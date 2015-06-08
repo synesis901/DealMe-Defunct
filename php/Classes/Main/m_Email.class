@@ -7,26 +7,26 @@ class m_Email {
 	/*
 		Properties
 	*/
-	private $headers;
+	private static $headers = "";
 	
 	/*
 		Methods
 	*/
-	private function build_headers(){
+	private static function build_headers(){
 		// To send HTML mail, the Content-type header must be set
-		$this->headers  = 'MIME-Version: 1.0' . "\r\n";
-		$this->headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+		self::$headers  = 'MIME-Version: 1.0' . "\r\n";
+		self::$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 
 		// Additional headers
 		//$this->headers .= 'To: No-Reply DealMe <noreply@dealme.link>' . "\r\n";
-		$this->headers .= 'From: No-Reply DealMe <noreply@dealme.link>' . "\r\n";
+		self::$headers .= 'From: No-Reply DealMe <noreply@dealme.link>' . "\r\n";
 		//$this->headers .= 'Cc: No-Reply DealMe <noreply@dealme.link>' . "\r\n";
 		//$this->headers .= 'Bcc: No-Reply DealMe <noreply@dealme.link>' . "\r\n";
 	}
 	
 	
-	public static function registration($to,$username,$verification){
-		$this->build_headers();
+	public static function registration($to,$verification){
+		self::build_headers();
 		$subject = 'DealMe - Welcome to DealMe';
 		$message = "
 			<html>
@@ -36,7 +36,7 @@ class m_Email {
 			
 			<p>You have received this email because you have registered a user account at DealMe. Thank you for that.</p>
 			<br/>
-			<p>Just as reminder your user name is, ".$username.".</p>
+			<p>Just as reminder your user name is, ".$to.".</p>
 			<br/>
 			<p><a href='http://dealme.link/test/verification.php?v=".$verification."'>Click Here</a> to validate your account. If the link doesn't work, copy the line below and paste it into the URL bar at the top.</p>
 			<br/>
@@ -48,11 +48,11 @@ class m_Email {
 			</body>
 			</html>
 			";
-		return mail($to,$subject,$message,$this->headers);
+		return mail($to,$subject,$message,self::$headers);
 	}
 	
 	public static function recovery($to,$user,$hashed){
-		$this->build_headers();
+		self::build_headers();
 		$subject = 'DealMe - E-Mail Recovery';
 		$message = "
 			<html>
@@ -71,7 +71,7 @@ class m_Email {
 			</body>
 			</html>
 		";
-		return mail($to,$subject,$message,$this->headers);
+		return mail($to,$subject,$message,self::$headers);
 	}
 }
 

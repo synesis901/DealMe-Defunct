@@ -55,25 +55,25 @@
     	<div class="modal-content">
       		<div class="modal-header">
 		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		        <h4 class="modal-title" id="myModalLabel">Sign Up</h4>
+		        <h4 class="modal-title" id="myModalLabel">Sign Up</h4> <?php echo isset($_GET['e'])?$_GET['e']:""; ?>
 		    </div>
 		<div class="modal-body">
 	      	<form data-toggle="validator" role="form" id="form">
 				<div class="form-group">
 			    	<label for="display-name">Display Name</label>
-			    	<input type="text" class="form-control" id="display-name" name="name" placeholder="Enter Display Name" required>
+			    	<input type="text" class="form-control" id="display-name" name="name" placeholder="Enter Display Name" required value="<?php echo isset($_GET['name'])?$_GET['name']:""; ?>">
 			    	<div class="help-block with-errors"></div>
 			  	</div>
 			  	
 				<div class="form-group">
-			    	<label for="email">Email address</label>
-			    	<input type="email" class="form-control" id="inputemail" name="email" placeholder="Enter Email" data-error="Invalid E-mail" required>
+			    	<label for="email">Email Address</label>
+			    	<input type="email" class="form-control" id="inputemail" name="email" placeholder="Enter Email" data-error="Invalid E-mail" required value="<?php echo isset($_GET['email'])?$_GET['email']:""; ?>">
 			  		<div class="help-block with-errors"></div>
 			  	</div>
 			  	
 			  	<div class="form-group">
 			    	<label for="location">Town/City</label>
-			    	<input type="text" name="location" class="form-control" id="inputlocation" placeholder="Where do you hail?" required>
+			    	<input type="text" name="location" class="form-control" id="inputlocation" placeholder="Where do you hail?" required value="<?php echo isset($_GET['loc'])?$_GET['loc']:""; ?>">
 			  	</div>
 			  	
 			  	<div class="form-group">
@@ -89,7 +89,7 @@
 			  	</div>
 				
 				
-				<input type="hidden" name="switch" value="registration">
+				<input type="hidden" name="switch" value="default.php">
 				<button type="submit" form="form" formaction="php/register.php" formmethod="post" class="btn btn-default">Submit</button>
 			</form>
 		</div>
