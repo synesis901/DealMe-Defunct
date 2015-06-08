@@ -49,7 +49,7 @@
 </nav>
 
 <!-- Modal Stuff for nav -->
-
+<!-- Registration Modal -->
 <div class="modal fade" id="signup-Modal" tabindex="-1" role="dialog" aria-labelledby="signup-Modal" aria-hidden="true">
 	<div class="modal-dialog">
     	<div class="modal-content">
@@ -57,42 +57,57 @@
 		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 		        <h4 class="modal-title" id="myModalLabel">Sign Up</h4> <?php echo isset($_GET['e'])?$_GET['e']:""; ?>
 		    </div>
-		<div class="modal-body">
-	      	<form data-toggle="validator" role="form" id="form">
-				<div class="form-group">
-			    	<label for="display-name">Display Name</label>
-			    	<input type="text" class="form-control" id="display-name" name="name" placeholder="Enter Display Name" required value="<?php echo isset($_GET['name'])?$_GET['name']:""; ?>">
-			    	<div class="help-block with-errors"></div>
-			  	</div>
-			  	
-				<div class="form-group">
-			    	<label for="email">Email Address</label>
-			    	<input type="email" class="form-control" id="inputemail" name="email" placeholder="Enter Email" data-error="Invalid E-mail" required value="<?php echo isset($_GET['email'])?$_GET['email']:""; ?>">
-			  		<div class="help-block with-errors"></div>
-			  	</div>
-			  	
-			  	<div class="form-group">
-			    	<label for="location">Town/City</label>
-			    	<input type="text" name="location" class="form-control" id="inputlocation" placeholder="Where do you hail?" required value="<?php echo isset($_GET['loc'])?$_GET['loc']:""; ?>">
-			  	</div>
-			  	
-			  	<div class="form-group">
-			    	<label for="password">Password</label>
-			    	<input type="password" class="form-control"  name="pass" id="inputPassword" placeholder="Enter Password" required>
-			  		<div class="help-block with-errors"></div>
-			  	</div>
-			  	
-			  	<div class="form-group">
-			    	<label for="password">Confirm Password</label>
-			    	<input type="password" class="form-control" name="pass2" id="passwordConfirm" data-match="#inputPassword" data-match-error="Password does not match" placeholder="Enter Password" required>
-			  		<div class="help-block with-errors"></div>
-			  	</div>
-				
-				
-				<input type="hidden" name="switch" value="default.php">
-				<button type="submit" form="form" formaction="php/register.php" formmethod="post" class="btn btn-default">Submit</button>
-			</form>
-		</div>
+			<div class="modal-body">
+				<form data-toggle="validator" role="form" id="form">
+					<div class="form-group">
+						<label for="display-name">Display Name</label>
+						<input type="text" class="form-control" id="display-name" name="name" placeholder="Enter Display Name" required value="<?php echo isset($_GET['name'])?$_GET['name']:""; ?>">
+						<div class="help-block with-errors"></div>
+					</div>
+					
+					<div class="form-group">
+						<label for="email">Email Address</label>
+						<input type="email" class="form-control" id="inputemail" name="email" placeholder="Enter Email" data-error="Invalid E-mail" required value="<?php echo isset($_GET['email'])?$_GET['email']:""; ?>">
+						<div class="help-block with-errors"></div>
+					</div>
+					
+					<div class="form-group">
+						<label for="location">Town/City</label>
+						<input type="text" name="location" class="form-control" id="inputlocation" placeholder="Where do you hail?" required value="<?php echo isset($_GET['loc'])?$_GET['loc']:""; ?>">
+					</div>
+					
+					<div class="form-group">
+						<label for="password">Password</label>
+						<input type="password" class="form-control"  name="pass" id="inputPassword" placeholder="Enter Password" required>
+						<div class="help-block with-errors"></div>
+					</div>
+					
+					<div class="form-group">
+						<label for="password">Confirm Password</label>
+						<input type="password" class="form-control" name="pass2" id="passwordConfirm" data-match="#inputPassword" data-match-error="Password does not match" placeholder="Enter Password" required>
+						<div class="help-block with-errors"></div>
+					</div>
+					
+					
+					<input type="hidden" name="switch" value="default.php">
+					<button type="submit" form="form" formaction="php/register.php" formmethod="post" class="btn btn-default">Submit</button>
+				</form>
+			</div>
+  		</div>
+	</div>
+</div>
+
+<!-- Successful Registration Modal -->
+<div class="modal fade" id="succ-Modal" tabindex="-1" role="dialog" aria-labelledby="succ-Modal" aria-hidden="true">
+	<div class="modal-dialog">
+    	<div class="modal-content">
+      		<div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">Thank You!</h4>
+		    </div>
+			<div class="modal-body">
+				Thank You for your Registration! Check your Email to Validate your Account!
+			</div>
   		</div>
 	</div>
 </div>

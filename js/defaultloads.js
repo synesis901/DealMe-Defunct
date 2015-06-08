@@ -39,6 +39,12 @@ $(document).ready(function(){
 		});
 	}
 	
+	//signup-Modal show on submit
+	$(window).load(function(){
+	alert('yes');
+		$('#signup-Modal').modal('show');
+	});
+	
 	
 });
 
