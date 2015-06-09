@@ -13,7 +13,7 @@ function initMapCurrentLocation(object){
 		
 		//add options
 		object.gmap('option', 'center', defaultPosition);
-		object.gmap('option', 'zoom', 10);
+		object.gmap('option', 'zoom', 15);
 		
 		object.gmap('getCurrentPosition', function(position, status) {
 			if ( status === 'OK' ) {
@@ -38,7 +38,7 @@ function initMapCurrentLocation(object){
 function initMarkersToMapsJSON(jsonData, object){
 
 	object.gmap({'disableDefaultUI' : 'true'}).bind('init', function(evt, map) { 
-		object.gmap('option', 'zoom', 7);
+		
 		$.each( jsonData.markers, function(i, marker) {
 			object.gmap('addMarker', { 
 				'position': new google.maps.LatLng(marker.latitude, marker.longitude), 
@@ -46,7 +46,10 @@ function initMarkersToMapsJSON(jsonData, object){
 			}).click(function() {
 				object.gmap('openInfoWindow', { 'content': marker.content }, this);
 			});
+			
 		});
+		
+		object.gmap('option', 'zoom', 15);
 		
 		mapObject = map;
 	});
