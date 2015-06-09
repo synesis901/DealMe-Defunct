@@ -1,7 +1,6 @@
 <?php
 	include ($_SERVER['DOCUMENT_ROOT']."/DealMeMVP/php/header.php");
 	echo "DealMe";
-	echo ($_SERVER['DOCUMENT_ROOT']);
 	include ($_SERVER['DOCUMENT_ROOT']."/DealMeMVP/php/preload.php");
 	echo "<link rel='stylesheet' type='text/css' href='/DealMeMVP/css/admin.css'>";
 	include ($_SERVER['DOCUMENT_ROOT']."/DealMeMVP/php/Classes/Search/c_search.php");
@@ -29,5 +28,5 @@
 
 <!--  test -->
 <?php 
-include($_SERVER['DOCUMENT_ROOT']."/DealMeMVP/php/footer.php");
+include($_SERVER['DOCUMENT_ROOT']."/php/footer.php");
 ?>

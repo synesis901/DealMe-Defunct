@@ -13,7 +13,7 @@ function initMapCurrentLocation(object){
 		
 		//add options
 		object.gmap('option', 'center', defaultPosition);
-		object.gmap('option', 'zoom', 15);
+		object.gmap('option', 'zoom', 10);
 		
 		object.gmap('getCurrentPosition', function(position, status) {
 			if ( status === 'OK' ) {
@@ -36,8 +36,9 @@ function initMapCurrentLocation(object){
  * function (json data from database, div object)
  * */
 function initMarkersToMapsJSON(jsonData, object){
-	
+
 	object.gmap({'disableDefaultUI' : 'true'}).bind('init', function(evt, map) { 
+		object.gmap('option', 'zoom', 7);
 		$.each( jsonData.markers, function(i, marker) {
 			object.gmap('addMarker', { 
 				'position': new google.maps.LatLng(marker.latitude, marker.longitude), 
@@ -46,6 +47,7 @@ function initMarkersToMapsJSON(jsonData, object){
 				object.gmap('openInfoWindow', { 'content': marker.content }, this);
 			});
 		});
+		
 		mapObject = map;
 	});
 	
@@ -89,6 +91,11 @@ function setScollWheel(object, bool)
 		object.gmap('get', 'map').set('scrollwheel', false);	
 }
 
+function setZoom(object, zoomlevel)
+{
+	//object.gmap('option', 'zoom', zoomlevel);
+}
+
 $(document).ready(function(){
 	
 	//initMapCurrentLocation($('#googleMapsCanvas'));
@@ -99,8 +106,9 @@ $(document).ready(function(){
 		
 		//alert('modal');
 
-		$.getJSON( 'js/mapsloaderExampleFiles/sample.json', function(data) { 
+		$.getJSON( '/js/mapsloaderExampleFiles/sample.json', function(data) { 
 			initMarkersToMapsJSON(data, $('#googleMapsModal'));
+
 			
 		}) 
 		.done(function() {
@@ -110,6 +118,8 @@ $(document).ready(function(){
 			{
 				updateMarkersToMap($('#googleMapsModal'));
 			});
+			
+			//setZoom($('#googleMapsModal'), 5);
 			$('#googleMapsCanvas').gmap('refresh');
 			
 		})
@@ -124,7 +134,7 @@ $(document).ready(function(){
 	
 
 	
-	$.getJSON( 'js/mapsloaderExampleFiles/sample.json', function(data) { 
+	$.getJSON( '/js/mapsloaderExampleFiles/sample.json', function(data) { 
 		initMarkersToMapsJSON(data, $('#googleMapsCanvas'));
 		
 	}) 

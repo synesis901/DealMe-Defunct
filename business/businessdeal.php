@@ -1,10 +1,9 @@
 <?php
-	include ($_SERVER['DOCUMENT_ROOT']."/DealMeMVP/php/header.php");
+	include ($_SERVER['DOCUMENT_ROOT']."/php/header.php");
 	echo "DealMe";
-	echo ($_SERVER['DOCUMENT_ROOT']);
-	include ($_SERVER['DOCUMENT_ROOT']."/DealMeMVP/php/preload.php");
-	include ($_SERVER['DOCUMENT_ROOT']."/DealMeMVP/php/Classes/Search/c_search.php");
-	include ($_SERVER['DOCUMENT_ROOT']."/DealMeMVP/php/bodystart.php");
+	include ($_SERVER['DOCUMENT_ROOT']."/php/preload.php");
+	include ($_SERVER['DOCUMENT_ROOT']."/php/Classes/Search/c_search.php");
+	include ($_SERVER['DOCUMENT_ROOT']."/php/bodystart.php");
 	
 ?>
 
@@ -55,5 +54,5 @@ Quisque ut dignissim lorem, vitae aliquam arcu. Lorem ipsum dolor sit amet, cons
 
 <!--  test -->
 <?php 
-include($_SERVER['DOCUMENT_ROOT']."/DealMeMVP/php/footer.php");
+include($_SERVER['DOCUMENT_ROOT']."/php/footer.php");
 ?>
