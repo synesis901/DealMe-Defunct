@@ -29,14 +29,15 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="col-sm-5">
-					<h1>Business Name</h1>
-					<p>
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum nisi eu est tincidunt, id tempus nulla elementum. Pellentesque sed nulla velit. In at massa turpis. Nam tincidunt vulputate eros pretium gravida. Curabitur sit amet sapien urna. Nam scelerisque lobortis diam, et vehicula tortor volutpat sit amet. Aenean ligula diam, condimentum at sem id, euismod pretium magna. Suspendisse ultrices placerat sapien, eu volutpat ex aliquet sed. Nam rutrum odio ut ligula aliquam convallis. Nunc eget diam augue. Nunc ut vehicula lorem.
-
-Nullam tincidunt bibendum sollicitudin. Suspendisse consectetur venenatis arcu, eget dignissim turpis interdum non. Proin tristique velit libero, eget lobortis arcu lobortis ut. In hac habitasse platea dictumst. Fusce sem neque, condimentum id vulputate sit amet, sagittis eget elit. In libero libero, efficitur in arcu tempus, rutrum cursus purus. Praesent magna nunc, aliquet egestas sem sed, ultricies molestie felis. Mauris iaculis elit elit, sit amet egestas ipsum pharetra bibendum. Cras vitae vehicula nisi, non tincidunt nunc. Phasellus sollicitudin tempor mattis. Cras ipsum metus, elementum at nulla quis, sollicitudin placerat leo.
-
-Quisque ut dignissim lorem, vitae aliquam arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sagittis, velit id blandit egestas, orci leo tempor metus, id dignissim nunc quam pretium. </p>
+					<h1 class="page-header">RuralTech Computers, Inc.</h1>
+					<div class="row">
+						<h4>Location: <small>32 23rd Street, Battleford SK</small></h4>
+						<h4>Phone: <small>123 123-4567</small></h4>
+						<h4>Email: <small>email@email.com</small></h4>
+						<p>Get two hours of hardware work done, get a free virus removal!</p>
+					</div>
+					<div class="row">
+					</div>
 				</div>
 				<div class="col-sm-1"></div>
 				<div class="col-sm-6 bg-info googleMapsCanvas" id="googleMapsCanvas"></div>
@@ -44,7 +45,8 @@ Quisque ut dignissim lorem, vitae aliquam arcu. Lorem ipsum dolor sit amet, cons
 		</div>
 		<div class="row">
 			<div class="col-sm-12">
-				<h1>Deals Go Here</h1>
+				<h1>Deals</h1>
+				<p>No Current Deals</p>
 			</div>
 			
 		</div>

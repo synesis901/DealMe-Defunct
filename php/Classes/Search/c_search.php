@@ -53,19 +53,21 @@ class SearchResults
     			<div class="modal-content">
       				<div class="modal-header">
         				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        				<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        				<h4 class="modal-title" id="myModalLabel">RuralTech Computers, Inc.</h4>
       				</div>
       				<div class="modal-body">
 						<div class="row">
 							<div class="googleMapsModal col-sm-4" id="googleMapsModal"></div>
 							<div class="col-sm-1"></div>
 							<div class="col-sm-6">
-								<p>Business Information Here</p>
+								<h4>Location: <small>32 23rd Street, Battleford SK</small></h4>
+								<h4>Phone: <small>123 123-4567</small></h4>
+								<h4>Email: <small>email@email.com</small></h4>
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-sm-6">
-      							<p><a href="business/businessdeal.php">link to business</a></p>
+							<div class="col-sm-11">
+      							<p class="text-right"><a href="business/businessdeal.php">Business Page Link</a></p>
 							</div>
       					</div>
 					</div>
