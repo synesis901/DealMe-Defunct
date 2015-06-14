@@ -9,20 +9,12 @@
         		<span class="icon-bar"></span>
         		<span class="icon-bar"></span>
       		</button>
-      		<a class="navbar-brand" href="/default.php">DealMe</a>
+      		<a class="navbar-brand" href="/">DealMe</a>
     	</div>
 		
 		<div id="navbar" class="navbar-collapse collapse">
 			
 			<!-- Left hand side nav -->
-			<form class="navbar-form navbar-left" id="search" role="search">
-  				<div class="input-group">
-      				<input type="text" class="form-control" placeholder="Search for...">
-      				<span class="input-group-btn">
-        				<button class="btn btn-default" type="button">Search</button>
-      				</span>
-   	 			</div><!-- /input-group -->
-			</form>
 			
 			
 			<!-- Right hand side nav -->

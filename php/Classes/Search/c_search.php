@@ -25,7 +25,7 @@ class SearchResults
 	{
 		//populate search object
 		echo
-		'<div class="col-sm-4">
+		'<div class="col-md-4 col-sm-4">
 		<a href="#" data-toggle="modal" data-target="#searchModal"><img src="images/test/squaretest.jpg" class="img-responsive img-thumbnail" alt="test image"></a>
 		</div>';
 		

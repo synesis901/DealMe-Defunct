@@ -25,10 +25,10 @@
 <div class="content-area-mainpage">
 	<div class="Search-Area" id="Search-Area">
 		<div class="row top-content">
-			<div class="col-sm-12">
-				<div class="col-sm-4"></div>
+			<div class="col-md-12">
+				<div class="col-md-4 col-sm-2"></div>
 				<form id="search" role="search" class="form-inline">
-	  				 <div class="input-group col-sm-5 center">
+	  				 <div class="input-group col-md-5 col-sm-8 center">
 	  				 	<div class="input-group-addon" data-toggle="collapse" id="Adv-Search-Area-Button" data-target="#Adv-Search"><span class="caret"></span></div>
 	      				<input type="text" class="form-control" placeholder="Search for...">
 	      				<span class="input-group-btn">
@@ -41,21 +41,21 @@
 		</div>
 		<div class="row collapse" id="Adv-Search">
 			<form id="Adv-search" role="Adv-search" class="form-inline">
-				<div class="col-sm-12">
-					<div class="col-sm-3"></div>
-					<div class="col-sm-6">
+				<div class="col-md-12  com-sm-12">
+					<div class="col-md-3 col-sm-3"></div>
+					<div class="col-md-6 col-sm-6">
 						<div class="row">
-							<div class="col-sm-4 checkbox" id="Adv-Search-Div-1">
+							<div class="col-md-4 col-sm-4 checkbox" id="Adv-Search-Div-1">
 								<label>
 									<input type="checkbox" id="Adv-Search-Chkbox-1"> Check me out
 								</label>
 							</div>
-							<div class="col-sm-4 checkbox" id="Adv-Search-Div-2">
+							<div class="col-md-4 col-sm-4 checkbox" id="Adv-Search-Div-2">
 								<label>
 									<input type="checkbox" id="Adv-Search-Chkbox-2"> Check me out
 								</label>
 							</div>
-							<div class="col-sm-4 checkbox" id="Adv-Search-Div-3">
+							<div class="col-md-4 col-sm-4 checkbox" id="Adv-Search-Div-3">
 								<label>
 									<input type="checkbox" id="Adv-Search-Chkbox-3"> Check me out
 								</label>
@@ -63,17 +63,17 @@
 						</div> <!-- top row -->
 						
 						<div class="row">
-							<div class="col-sm-4 checkbox" id="Adv-Search-Div-4">
+							<div class="col-md-4 col-sm-4 checkbox" id="Adv-Search-Div-4">
 								<label>
 									<input type="checkbox" id="Adv-Search-Chkbox-4"> Check me out
 								</label>
 							</div>
-							<div class="col-sm-4 checkbox" id="Adv-Search-Div-5">
+							<div class="col-md-4 col-sm-4 checkbox" id="Adv-Search-Div-5">
 								<label>
 									<input type="checkbox" id="Adv-Search-Chkbox-5"> Check me out
 								</label>
 							</div>
-							<div class="col-sm-4 checkbox" id="Adv-Search-Div-6">
+							<div class="col-md-4 col-sm-4 checkbox" id="Adv-Search-Div-6">
 								<label>
 									<input type="checkbox" id="Adv-Search-Chkbox-6"> Check me out
 								</label>
