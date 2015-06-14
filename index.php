@@ -26,17 +26,22 @@
 	<div class="Search-Area" id="Search-Area">
 		<div class="row top-content">
 			<div class="col-md-12">
-				<div class="col-md-4 col-sm-2"></div>
-				<form id="search" role="search" class="form-inline">
-	  				 <div class="input-group col-md-5 col-sm-8 center">
-	  				 	<div class="input-group-addon" data-toggle="collapse" id="Adv-Search-Area-Button" data-target="#Adv-Search"><span class="caret"></span></div>
-	      				<input type="text" class="form-control" placeholder="Search for...">
-	      				<span class="input-group-btn">
-	        				<button class="btn btn-default" type="button">Search</button>
-	      				</span>
-	      				
-	   	 			</div><!-- /input-group -->
-	   	 		</form>
+				<div class="col-md-5"></div>
+				<div class="col-md-2 text-center center">
+					<button class="btn btn-default" type="button" data-toggle="collapse" id="Adv-Search-Area-Button" data-target="#Adv-Search">Search</button>
+					<!--For later use
+					<form id="search" role="search" class="form-inline">
+		  				   <div class="input-group col-md-5 col-sm-8 center">
+		  				 	<div class="input-group-addon" data-toggle="collapse" id="Adv-Search-Area-Button" data-target="#Adv-Search"><span class="caret"></span></div>
+		      				<input type="text" class="form-control" placeholder="Search for...">
+		      				<span class="input-group-btn">
+		        				<button class="btn btn-default" type="button">Search</button>
+		      				</span>
+		      				
+		   	 			</div> /input-group
+		   	 		</form>
+		   	 		-->
+				</div>
 			</div>
 		</div>
 		<div class="row collapse" id="Adv-Search">

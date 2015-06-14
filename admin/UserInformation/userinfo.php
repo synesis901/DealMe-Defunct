@@ -1,6 +1,8 @@
-
-
-	<?php //get user info here ?>
+<?php //get user info here 
+?>
+	
+	<h1 class="page-header">Profile Info</h1>
+	
 	<div class="row">
 		<h3 class="col-sm-4">Username</h3>
 		<h3 class="col-sm-8"><small>User-Name-Here</small></h3>

@@ -17,7 +17,9 @@ $(document).ready(function(){
 	}
 	
 	//logics
-	if($('#Search-Area').lengh)
+	
+	
+	if($('#Search-Area').length)
 	{
 		$('#Search-Area').click(function () {
 			for (i = 1; i <= 6; i++)
@@ -40,11 +42,11 @@ $(document).ready(function(){
 	}
 	
 	//signup-Modal show on submit
+	/*
 	$(window).load(function(){
-	alert('yes');
 		$('#signup-Modal').modal('show');
 	});
-	
+	*/
 	
 });
 

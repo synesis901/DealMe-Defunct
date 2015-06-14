@@ -1,8 +1,9 @@
-
-	<?php //get user info here ?>
+<?php 
+	//get user info here
+?>
+	
+	<h1 class="page-header">Profile Info</h1>
 	<form data-toggle="validator" role="form">
-			  	
-			  	
 		<div class="form-group">
 	    	<label for="email">Email address</label>
 	    	<input type="email" class="form-control" id="inputemail" placeholder="Enter Email" data-error="Invalid E-mail" required>

@@ -1,10 +1,10 @@
 <?php
-	include ($_SERVER['DOCUMENT_ROOT']."/DealMeMVP/php/header.php");
+	include ($_SERVER['DOCUMENT_ROOT']."/php/header.php");
 	echo "DealMe";
-	include ($_SERVER['DOCUMENT_ROOT']."/DealMeMVP/php/preload.php");
-	echo "<link rel='stylesheet' type='text/css' href='/DealMeMVP/css/admin.css'>";
-	include ($_SERVER['DOCUMENT_ROOT']."/DealMeMVP/php/Classes/Search/c_search.php");
-	include ($_SERVER['DOCUMENT_ROOT']."/DealMeMVP/php/bodystartadmin.php");
+	include ($_SERVER['DOCUMENT_ROOT']."/php/preload.php");
+	echo "<link rel='stylesheet' type='text/css' href='/css/admin.css'>";
+	include ($_SERVER['DOCUMENT_ROOT']."/php/Classes/Search/c_search.php");
+	include ($_SERVER['DOCUMENT_ROOT']."/php/bodystartadmin.php");
 	
 ?>
 
@@ -26,7 +26,4 @@
 </div><!-- .content-area -->
 
 
-<!--  test -->
-<?php 
-include($_SERVER['DOCUMENT_ROOT']."/php/footer.php");
-?>
+</body>
