@@ -109,7 +109,7 @@ $(document).ready(function(){
 		
 		//alert('modal');
 
-		$.getJSON( '/js/mapsloaderExampleFiles/sample.json', function(data) { 
+		$.getJSON( 'js/mapsloaderExampleFiles/sample.json', function(data) { 
 			initMarkersToMapsJSON(data, $('#googleMapsModal'));
 
 			
@@ -137,7 +137,7 @@ $(document).ready(function(){
 	
 
 	
-	$.getJSON( '/js/mapsloaderExampleFiles/sample.json', function(data) { 
+	$.getJSON( 'js/mapsloaderExampleFiles/sample.json', function(data) { 
 		initMarkersToMapsJSON(data, $('#googleMapsCanvas'));
 		
 	}) 
