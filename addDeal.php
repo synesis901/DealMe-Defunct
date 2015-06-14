@@ -1,6 +1,6 @@
 <?php
 /*
- * THIS IS FOR INTERAL USE ONLY
+ * THIS IS FOR INTERAL USE ONLY - Basic functionality
  */
 
 	include ($_SERVER['DOCUMENT_ROOT']."/php/header.php");
