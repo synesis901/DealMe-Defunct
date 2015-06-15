@@ -12,8 +12,8 @@ class m_var{
 	private static $businessAccount = "Business_Profile";
 	private static $businessAds = "Deals";
 	private static $userAccount = "UserAccount";
-	private static $adCategory = "deal_categories";
-	private static $businessCategory = "profile_categories";
+	private static $locations = "locations";
+	private static $category = "categories";
 
 	/*
 		protect this static class from instantiation
@@ -42,12 +42,12 @@ class m_var{
 		return self::$businessAds;
 	}
 	
-	public static function get_adCategory(){
-		return self::$adCategory;
+	public static function get_locations(){
+		return self::$locations;
 	}
 	
-	public static function get_businessCategory(){
-		return self::$businessCategory;
+	public static function get_categories(){
+		return self::$category;
 	}
 }
 ?>

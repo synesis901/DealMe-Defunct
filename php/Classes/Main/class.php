@@ -25,12 +25,12 @@ require("m_Email.class");//not tested
 require("m_Verify.class");//not tested
 require("m_Recovery.class");//not tested
 require("m_Login.class");
+require("m_Category.class");
 //require("m_.class");
 
 // email/password recovery(finish later;custom php page)
 // m_Login _SESSION data needs to change. the whole array (incl. pass.) is in the _SESSION
 //display of information[deals] (how do businesses want their information displayed)
-
 
 
 require("m_closeConnection.php");
