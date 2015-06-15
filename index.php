@@ -28,11 +28,11 @@
 			<div class="col-md-12">
 				<div class="col-md-5"></div>
 				<div class="col-md-2 text-center center">
-					<button class="btn btn-default" type="button" data-toggle="collapse" id="Adv-Search-Area-Button" data-target="#Adv-Search">Search</button>
+					<button class="btn btn-default" type="submit" data-toggle="collapse" id="Adv-Search-Area-Button" data-target="#Adv-Search" formmethod="post" formaction="" form="Adv-search">Search</button>
 					<!--For later use
 					<form id="search" role="search" class="form-inline">
-		  				   <div class="input-group col-md-5 col-sm-8 center">
-		  				 	<div class="input-group-addon" data-toggle="collapse" id="Adv-Search-Area-Button" data-target="#Adv-Search"><span class="caret"></span></div>
+						<div class="input-group col-md-5 col-sm-8 center">
+							<div class="input-group-addon" data-toggle="collapse" id="Adv-Search-Area-Button" data-target="#Adv-Search"><span class="caret"></span></div>
 		      				<input type="text" class="form-control" placeholder="Search for...">
 		      				<span class="input-group-btn">
 		        				<button class="btn btn-default" type="button">Search</button>
@@ -50,6 +50,15 @@
 					<div class="col-md-3 col-sm-3"></div>
 					<div class="col-md-6 col-sm-6">
 						<div class="row">
+							<?php
+							$searchFilters = new m_Category();
+							echo $searchFilters->getLocations();
+							echo $searchFilters->getCategories();
+							/*
+								---see /php/Classes/Main/m_Category.php to see the HTML---
+							*/
+							?>
+							<!-- so I didn't delete all your data
 							<div class="col-md-4 col-sm-4 checkbox" id="Adv-Search-Div-1">
 								<label>
 									<input type="checkbox" id="Adv-Search-Chkbox-1"> Check me out
@@ -64,9 +73,9 @@
 								<label>
 									<input type="checkbox" id="Adv-Search-Chkbox-3"> Check me out
 								</label>
-							</div>
+							</div> -->
 						</div> <!-- top row -->
-						
+						<!--
 						<div class="row">
 							<div class="col-md-4 col-sm-4 checkbox" id="Adv-Search-Div-4">
 								<label>
