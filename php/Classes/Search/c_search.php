@@ -1,38 +1,31 @@
 <?php
-
+// class.php should already be called
 class SearchResults
 {
+	private $HTMLcontent = "";
+	private $searchResults = array();
 	
-	function initSearchResult($locationID, $resultSize)
+	
+	public function get_Content()
 	{	
-		switch ($resultSize)
-		{
-			case 1:
-				$this->smallSearchResult($locationID);
-				break;
-			case 2:
-				mediumSearchResult($locationID);
-				break;
-			case 3:
-				largeSearchResult($locationID);
-				break;
-		}
-		
-		return $resultSize;
+		return $this->HTMLcontent;
 	}
 	
-	function smallSearchResult($locationID)
+	public function smallSearchResult($locationID="North Battleford",$category="all")
 	{
 		//populate search object
-		echo
-		'<div class="col-md-4 col-sm-4">
-		<a href="#" data-toggle="modal" data-target="#searchModal"><img src="images/test/squaretest.jpg" class="img-responsive img-thumbnail" alt="test image"></a>
-		</div>';
+		$hold = array("city"=>$locationID);
+		m_Find::result(m_var::get_database(),m_var::get_businessAccount(),$hold);
+		if($category != "all"){
+			$this->categoryFilter(m_Find::get_results(),$category);
+		}else{
+			$this->searchResults = m_Find::get_results();
+		}
 		
-		$this->createModal($locationID);
+		$this->createContent($locationID);
 	}
 	
-	function mediumSearchResult($locationID)
+	function mediumSearchResult()
 	{
 		//populate search object
 	}
@@ -42,32 +35,37 @@ class SearchResults
 		//populate search object
 	}
 	
-	function createModal($locationID)
+	private function createContent()
 	{
 		
 		//do sql function here
+		foreach($this->searchResults as $doc){
 		
-		echo 
-		'<div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+		$this->HTMLcontent .=
+		'<div class="col-md-4 col-sm-4">
+		<a href="#" data-toggle="modal" data-target="#searchModal"><img src="images/test/squaretest.jpg" class="img-responsive img-thumbnail" alt="test image"></a>
+		</div>
+		
+		<div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
   			<div class="modal-dialog">
     			<div class="modal-content">
       				<div class="modal-header">
         				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        				<h4 class="modal-title" id="myModalLabel">RuralTech Computers, Inc.</h4>
+        				<h4 class="modal-title" id="myModalLabel">'.$doc['name'].'</h4>
       				</div>
       				<div class="modal-body">
 						<div class="row">
 							<div class="googleMapsModal col-sm-4" id="googleMapsModal"></div>
 							<div class="col-sm-1"></div>
 							<div class="col-sm-6">
-								<h4>Location: <small>32 23rd Street, Battleford SK</small></h4>
-								<h4>Phone: <small>123 123-4567</small></h4>
-								<h4>Email: <small>email@email.com</small></h4>
+								<h4>Location: <small>'.$doc['full_address'].'</small></h4>
+								<h4>Phone: <small>'.$doc['phone'].'</small></h4>
+								<h4>Email: <small>'.$doc['email'].'</small></h4>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-sm-11">
-      							<p class="text-right"><a href="business/businessdeal.php">Business Page Link</a></p>
+      							<p class="text-right"><a href="business/businessdeal.php?c='.$doc['_id'].'">Business Page Link</a></p>
 							</div>
       					</div>
 					</div>
@@ -77,6 +75,27 @@ class SearchResults
     			</div>
   			</div>
 		</div>';
+		}
+	}
+	
+	private function categoryFilter($r,$cat){
+		$hold = array();
+		
+		/*
+			hell of a filter... needs to be more efficient
+			loops through all the selected check boxes and all the docs and stores in an
+			array the docs that match
+		*/
+		foreach($cat as $c){
+			foreach($r as $doc){
+				foreach($doc['tags'] as $tags){
+					if($tags == $c){
+						array_push($hold,$doc);
+					}
+				}
+			}
+		}
+		$this->searchResults = $hold;
 	}
 }
 ?>

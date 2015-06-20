@@ -9,7 +9,7 @@
 	include ("php/bodystart.php");
 	
 	//init objects
-	$searchResultsClass = new SearchResults();
+	include("php/proccessSearchQuery.php");
 	
 ?>
 
@@ -28,7 +28,7 @@
 			<div class="col-md-12">
 				<div class="col-md-5"></div>
 				<div class="col-md-2 text-center center">
-					<button class="btn btn-default" type="submit" data-toggle="collapse" id="Adv-Search-Area-Button" data-target="#Adv-Search" formmethod="post" formaction="" form="Adv-search">Search</button>
+					<button class="btn btn-default" type="submit" data-toggle="collapse" id="Adv-Search-Area-Button" data-target="#Adv-Search">Search</button>
 					<!--For later use
 					<form id="search" role="search" class="form-inline">
 						<div class="input-group col-md-5 col-sm-8 center">
@@ -54,6 +54,7 @@
 							$searchFilters = new m_Category();
 							echo $searchFilters->getLocations();
 							echo $searchFilters->getCategories();
+							echo "<button type=\"submit\" formmethod=\"post\" formaction=\"\" form=\"Adv-search\">Search Now</button>";
 							/*
 								---see /php/Classes/Main/m_Category.php to see the HTML---
 							*/
@@ -101,10 +102,8 @@
 	
 	<div class="container main-content-bg">
 		<div class="row">
-		<?php 
-			$searchResultsClass->initSearchResult(1,1);
-			$searchResultsClass->initSearchResult(1,1);
-			$searchResultsClass->initSearchResult(1,1);
+		<?php
+			echo $searchResultsClass->get_Content();
 		?>
 		</div>
 	</div><!-- main information div -->
