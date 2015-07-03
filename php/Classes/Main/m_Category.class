@@ -56,11 +56,15 @@ class m_Category {
 		foreach($loc as $doc){
 			$this->locations .='<option value="'.$doc['_id'].'">'.$doc['_id'].'</option>';
 		}
-		$this->locations .='</select><br>';
+		$this->locations .='</select>';
 		
 		// categories
 		foreach($cat as $doc1){
-			$this->categories .='<input type="checkbox" name="category[]" value="'.$doc1['_id'].'" id="'.$doc1['_id'].'" checked><label form="'.$doc1['_id'].'">'.$doc1['_id'].'</label>'."\r\n<br>";
+			$this->categories .='
+			<div class="checkbox">
+			<label form="'.$doc1['_id'].'">
+				<input type="checkbox" name="category[]" value="'.$doc1['_id'].'" id="'.$doc1['_id'].'" checked>'.$doc1['_id'].'
+			</label>'."\r\n</div>";
 		}
 	}
 }

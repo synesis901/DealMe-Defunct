@@ -39,14 +39,15 @@ class SearchResults
 	{
 		
 		//do sql function here
+		$hold = 0;
 		foreach($this->searchResults as $doc){
 		
 		$this->HTMLcontent .=
 		'<div class="col-md-4 col-sm-4">
-		<a href="#" data-toggle="modal" data-target="#searchModal"><img src="images/test/squaretest.jpg" class="img-responsive img-thumbnail" alt="test image"></a>
+		<a href="#" data-toggle="modal" data-target="#searchModal'.$hold.'"><img src="images/test/squaretest.jpg" class="img-responsive img-thumbnail" alt="test image"></a>
 		</div>
 		
-		<div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+		<div class="modal fade" id="searchModal'.$hold.'" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
   			<div class="modal-dialog">
     			<div class="modal-content">
       				<div class="modal-header">
@@ -75,6 +76,7 @@ class SearchResults
     			</div>
   			</div>
 		</div>';
+		$hold++;
 		}
 	}
 	

@@ -10,6 +10,7 @@
 	
 	//init objects
 	include("php/proccessSearchQuery.php");
+	$searchFilters = new m_Category();
 	
 ?>
 
@@ -47,53 +48,16 @@
 		<div class="row collapse" id="Adv-Search">
 			<form id="Adv-search" role="Adv-search" class="form-inline">
 				<div class="col-md-12  com-sm-12">
-					<div class="col-md-3 col-sm-3"></div>
-					<div class="col-md-6 col-sm-6">
+					<div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
 						<div class="row">
-							<?php
-							$searchFilters = new m_Category();
-							echo $searchFilters->getLocations();
-							echo $searchFilters->getCategories();
-							echo "<button type=\"submit\" formmethod=\"post\" formaction=\"\" form=\"Adv-search\">Search Now</button>";
-							/*
-								---see /php/Classes/Main/m_Category.php to see the HTML---
-							*/
-							?>
-							<!-- so I didn't delete all your data
-							<div class="col-md-4 col-sm-4 checkbox" id="Adv-Search-Div-1">
-								<label>
-									<input type="checkbox" id="Adv-Search-Chkbox-1"> Check me out
-								</label>
-							</div>
-							<div class="col-md-4 col-sm-4 checkbox" id="Adv-Search-Div-2">
-								<label>
-									<input type="checkbox" id="Adv-Search-Chkbox-2"> Check me out
-								</label>
-							</div>
-							<div class="col-md-4 col-sm-4 checkbox" id="Adv-Search-Div-3">
-								<label>
-									<input type="checkbox" id="Adv-Search-Chkbox-3"> Check me out
-								</label>
-							</div> -->
-						</div> <!-- top row -->
-						<!--
+							<?php echo $searchFilters->getLocations(); ?>
+						</div>
+						<div class="row"><div class="col-md-6">
+							<?php echo $searchFilters->getCategories(); ?>
+						</div></div>
 						<div class="row">
-							<div class="col-md-4 col-sm-4 checkbox" id="Adv-Search-Div-4">
-								<label>
-									<input type="checkbox" id="Adv-Search-Chkbox-4"> Check me out
-								</label>
-							</div>
-							<div class="col-md-4 col-sm-4 checkbox" id="Adv-Search-Div-5">
-								<label>
-									<input type="checkbox" id="Adv-Search-Chkbox-5"> Check me out
-								</label>
-							</div>
-							<div class="col-md-4 col-sm-4 checkbox" id="Adv-Search-Div-6">
-								<label>
-									<input type="checkbox" id="Adv-Search-Chkbox-6"> Check me out
-								</label>
-							</div>
-						</div><!-- bottom row -->
+							<button type="submit" formmethod="post" formaction="" form="Adv-search">Search Now</button>
+						</div>
 					</div>
 				</div>
 			</form>
