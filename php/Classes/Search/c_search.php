@@ -43,8 +43,11 @@ class SearchResults
 		foreach($this->searchResults as $doc){
 		
 		$this->HTMLcontent .=
-		'<div class="col-md-4 col-sm-4">
-		<a href="#" data-toggle="modal" data-target="#searchModal'.$hold.'"><img src="images/test/squaretest.jpg" class="img-responsive img-thumbnail" alt="test image"></a>
+		'<div class="col-md-4 col-sm-4 dm_drop-container">
+			<a href="#" data-toggle="modal" data-target="#searchModal'.$hold.'">
+				<img src="images/test/squaretest.jpg" class="img-responsive img-thumbnail" alt="test image" style="float: left;">
+			</a>
+			<div class="collapse well dm_drop-content">'.$doc['description'].'</div>
 		</div>
 		
 		<div class="modal fade" id="searchModal'.$hold.'" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">

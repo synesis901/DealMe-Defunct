@@ -48,5 +48,11 @@ $(document).ready(function(){
 	});
 	*/
 	
+	//test accordion
+	$('.dm_drop-container').hover(function(){
+		$('.dm_drop-content',this).collapse('show');
+	},function(){
+		$('.dm_drop-content',this).collapse('hide');
+	});	
 });
 
