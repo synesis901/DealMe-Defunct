@@ -52,7 +52,7 @@ class m_Category {
 	private function build($loc,$cat){
 		// locations
 		$this->locations = 
-		'<label for="location">Search City:</label><select name="location"><option value="">Select One...</option>';
+		'<label for="location">Search City:</label><select class="form-control" name="location"><option value="">Select One...</option>';
 		foreach($loc as $doc){
 			$this->locations .='<option value="'.$doc['_id'].'">'.$doc['_id'].'</option>';
 		}
