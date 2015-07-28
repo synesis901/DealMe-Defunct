@@ -44,10 +44,10 @@ class SearchResults
 		
 		$this->HTMLcontent .=
 		'<div class="col-md-4 col-sm-4 dm_drop-container">
+			<div class="collapse well dm_drop-content">'.$doc['modal_desc'].'</div>
 			<a href="#" data-toggle="modal" data-target="#searchModal'.$hold.'">
-				<img src="images/test/squaretest.jpg" class="img-responsive img-thumbnail" alt="test image" style="float: left;">
+				<img src="/images/business/'.$doc['_id'].'-lg.jpg" class="img-thumbnail" alt="'.$doc['name'].' Logo">
 			</a>
-			<div class="collapse well dm_drop-content">'.$doc['description'].'</div>
 		</div>
 		
 		<div class="modal fade" id="searchModal'.$hold.'" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
@@ -55,21 +55,22 @@ class SearchResults
     			<div class="modal-content">
       				<div class="modal-header">
         				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        				<h4 class="modal-title" id="myModalLabel">'.$doc['name'].'</h4>
+        				<h2 class="modal-title" id="myModalLabel">'.$doc['name'].'</h2>
       				</div>
       				<div class="modal-body">
 						<div class="row">
-							<div class="googleMapsModal col-sm-4" id="googleMapsModal"></div>
-							<div class="col-sm-1"></div>
-							<div class="col-sm-6">
-								<h4>Location: <small>'.$doc['full_address'].'</small></h4>
-								<h4>Phone: <small>'.$doc['phone'].'</small></h4>
-								<h4>Email: <small>'.$doc['email'].'</small></h4>
+							<!-- for later <div class="googleMapsModal col-sm-4" id="googleMapsModal"></div> -->
+							<div class="col-sm-4"><img src="/images/business/'.$doc['_id'].'-lg.jpg" class="img-thumbnail img-modal-md" alt="'.$doc['name'].' Logo"/></div>
+							<div class="col-sm-offset-1 col-sm-6">
+								<p>'.$doc['modal_desc'].'</p>
+								<h4><small>Location: </small>'.$doc['full_address'].'</h4>
+								<h4><small>Phone: </small>'.$doc['phone'].'</small></h4>
+								<h4><small>Email: </small>'.$doc['email'].'</small></h4>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-sm-11">
-      							<p class="text-right"><a href="business/businessdeal.php?c='.$doc['_id'].'">Business Page Link</a></p>
+      							<p class="text-right"><a href="business/businessdeal.php?b='.$doc['_id'].'">Business Page Link</a></p>
 							</div>
       					</div>
 					</div>

@@ -1,27 +1,20 @@
 <?php
-	include("php/Classes/Main/class.php");
-	include ("php/header.php");
+	include("/php/Classes/Main/class.php");
+	include ("/php/header.php");
 	echo "DealMe";
-	include ("php/preload.php");
+	include ("/php/preload.php");
 	
-	include ("php/Classes/Search/c_search.php");
+	include ("/php/Classes/Search/c_search.php");
 	echo "<link rel='stylesheet' type='text/css' href='css/frontpage.css'>";
-	include ("php/bodystart.php");
+	include ("/php/bodystart.php");
 	
 	//init objects
-	include("php/proccessSearchQuery.php");
+	include("/php/proccessSearchQuery.php");
 	$searchFilters = new m_Category();
-	
-?>
 
-<!-- Main jumbotron for featuring items -->
-<div class="jumbotron jumbotron-mainpage">
-    <div class="container">
-		<h1>MAIN HEADLINE</h1>
-		<p>Add Information Here</p>
-		<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
-	</div>
-</div>
+	//Main jumbotron for featuring items
+	include("/php/jumbotron.php");
+?>
 
 <div class="content-area-mainpage">
 	<div class="Search-Area" id="Search-Area">
@@ -29,7 +22,7 @@
 			<div class="col-md-12">
 				<div class="col-md-5"></div>
 				<div class="col-md-2 text-center center">
-					<button class="btn btn-default" type="submit" data-toggle="collapse" id="Adv-Search-Area-Button" data-target="#Adv-Search">Search</button>
+					<button class="btn btn-default" type="button" data-toggle="collapse" id="Adv-Search-Area-Button" data-target="#Adv-Search">Search</button>
 					<!--For later use
 					<form id="search" role="search" class="form-inline">
 						<div class="input-group col-md-5 col-sm-8 center">

@@ -20,7 +20,7 @@ $(document).ready(function(){
 	if($.urlParam("c")){
 		$('#succ-Modal').modal('show');
 	}
-	
-	
+	if($.urlParam("l")){
+		$('#login-Modal').modal('show');
+	}
 });
-

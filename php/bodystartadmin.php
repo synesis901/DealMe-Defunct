@@ -17,11 +17,11 @@
 
 			
 			<!-- Right hand side nav -->
-			<ul class="nav navbar-nav navbar-right">
+			<ul class="nav navbar-nav navbar-right col-md-3">
 				<!-- add php logic here -->
-				<li><a href="#">Add Business</a></li>
-				<li><a href="#">Modify Business</a></li>
-				<li class="dropdown">
+				<li><a href="/">Search</a></li>
+				<li><a href="/php/logout.php">Log Out</a></li>
+				<!--<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">User Account<span class="caret"></span></a>
 					<ul class="dropdown-menu" role="menu">
 						<li><a href="/admin/profileadmin.php">Profile</a></li>
@@ -29,10 +29,9 @@
 						<li><a href="#">Settings</a></li>
 						<li><a href="#">Logout</a></li>
 					</ul>
-				</li>
+				</li> -->
 			</ul>
 		
 		</div><!--/.nav-collapse -->
-
 
 </nav>

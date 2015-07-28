@@ -22,9 +22,10 @@ class m_Login {
 			if($info['valid'] != "true"){
 				return "Account Not Verified. Check E-Mail.";
 			}
-			$_SESSION['login'] = $info;
+			//Login Session -- change info
+			$_SESSION['login'] = $info["_id"];
 			m_Update::result(m_var::get_database(),m_var::get_userAccount(),array('_id'=>$info['_id']),array('$set'=>array('lastlogin'=>getdate())));
-			return "Login";
+			return "Logged In";
 		}else{
 			return "User and Pass didn't work";
 		}
@@ -57,9 +58,9 @@ class m_Login {
 	
 	public static function check(){
 		if($_SESSION['login'] != ""){
-			return true;
+			return "true";
 		}else{
-			return false;
+			return "false";
 		}
 	}
 	
