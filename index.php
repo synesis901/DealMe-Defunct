@@ -1,19 +1,19 @@
 <?php
-	include("/php/Classes/Main/class.php");
-	include ("/php/header.php");
+	include("php/Classes/Main/class.php");
+	include ("php/header.php");
 	echo "DealMe";
-	include ("/php/preload.php");
+	include ("php/preload.php");
 	
-	include ("/php/Classes/Search/c_search.php");
+	include ("php/Classes/Search/c_search.php");
 	echo "<link rel='stylesheet' type='text/css' href='css/frontpage.css'>";
-	include ("/php/bodystart.php");
+	include ("php/bodystart.php");
 	
 	//init objects
-	include("/php/proccessSearchQuery.php");
+	include("php/proccessSearchQuery.php");
 	$searchFilters = new m_Category();
 
 	//Main jumbotron for featuring items
-	include("/php/jumbotron.php");
+	include("php/jumbotron.php");
 ?>
 
 <div class="content-area-mainpage">

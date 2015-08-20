@@ -1,6 +1,6 @@
 </head>
 <body>
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default"><!-- removed "navbar-fixed-top" from the nav class. make JS scroll catch to add that class on scroll -->
 	<div class="container">
 		<div class="navbar-header">
     		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
