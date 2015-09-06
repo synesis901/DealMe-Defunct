@@ -105,38 +105,25 @@ $(document).ready(function(){
 	//init the google map
 	
 	//modal code?
-	$('#searchModal').on('shown.bs.modal', function (event) {
-		
-		//alert('modal');
-
-		$.getJSON( '/js/mapsloaderExampleFiles/sample.json', function(data) { 
-			initMarkersToMapsJSON(data, $('#googleMapsModal'));
-
-			
-		}) 
-		.done(function() {
-			setDrag($('#googleMapsModal'), false);
-			setScollWheel($('#googleMapsModal'), false);
-			$('#googleMapsModal').gmap('get', 'map').addListener('dragend', function()
-			{
-				updateMarkersToMap($('#googleMapsModal'));
-			});
-			
-			//setZoom($('#googleMapsModal'), 5);
-			$('#googleMapsCanvas').gmap('refresh');
-			
-		})
-		.fail(function() {
-			alert('Error - Fail to Retrieve Information');
-		})
-		.always(function() {
-		
+	$('#searchModal1').on('shown.bs.modal', function (event) {
+	
+		initMarkersToMapsJSON({"markers":[ { "latitude":locationArray[1].lat, "longitude":locationArray[1].lng } ]}, $('#googleMapsModal'));
+		setDrag($('#googleMapsModal'), false);
+		setScollWheel($('#googleMapsModal'), false);
+		$('#googleMapsModal').gmap('get', 'map').addListener('dragend', function()
+		{
+			updateMarkersToMap($('#googleMapsModal'));
 		});
 		
 	});
-	
-
-	
+initMarkersToMapsJSON({"markers":[ { "latitude":lat1, "longitude":lng1 } ]}, $('#googleMapsCanvas'));
+setDrag($('#googleMapsCanvas'), false);
+setScollWheel($('#googleMapsCanvas'), false);
+$('#googleMapsCanvas').gmap('get', 'map').addListener('dragend', function()
+{
+	updateMarkersToMap($('#googleMapsCanvas'));
+});
+	/*
 	$.getJSON( '/js/mapsloaderExampleFiles/sample.json', function(data) { 
 		initMarkersToMapsJSON(data, $('#googleMapsCanvas'));
 		
@@ -155,5 +142,5 @@ $(document).ready(function(){
 	.always(function() {
 	
 	});
-	
+	*/
 });

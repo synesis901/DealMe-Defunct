@@ -1,7 +1,7 @@
 <?php
 	include ($_SERVER['DOCUMENT_ROOT']."/php/Classes/Main/class.php");
 	include ($_SERVER['DOCUMENT_ROOT']."/php/header.php");
-	echo "DealMe";
+	echo "Findr";
 	include ($_SERVER['DOCUMENT_ROOT']."/php/preload.php");
 	include ($_SERVER['DOCUMENT_ROOT']."/php/Classes/Search/c_search.php");
 	include ($_SERVER['DOCUMENT_ROOT']."/php/bodystart.php");
@@ -11,18 +11,14 @@
 	$content = new businessDisplay($_GET);
 	
 ?>
-
-<!-- Main jumbotron for featuring items -->
-<?php include($_SERVER['DOCUMENT_ROOT']."/php/jumbotron.php"); ?>
-
+<script type="text/javascript">
+var lat1 = <?php echo $content->getBinfo()['location']['lat'] ?>;
+var lng1 = <?php echo $content->getBinfo()['location']['lng'] ?>;
+</script>
+	<script src="/js/mapsloader.js"></script>
 <div class="content-area">
 	<div class="top-content row">
-		<div class="col-md-12">
-			<div class="col-md-5"></div>
-			<div class="col-md-2 text-center center">
-				<button class="btn btn-default" type="button">Top Content Button</button>
-			</div>
-		</div>
+		
 	</div>
 	<div class="container">
 		<div class="row">

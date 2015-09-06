@@ -8,7 +8,6 @@
 	
 	 
 	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
-	<script src="/js/mapsloader.js"></script>
 	<script type="text/javascript" src="/js/registration.js"></script>
 	<script type="text/javascript" src="/js/defaultloads.js"></script>
 	<script src="/js/validator.js"></script>

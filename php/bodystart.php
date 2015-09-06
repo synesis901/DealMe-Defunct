@@ -66,7 +66,7 @@
 				<form data-toggle="validator" role="form" id="form">
 					<div class="form-group">
 						<label for="display-name">Display Name</label>
-						<input type="text" class="form-control" id="display-name" name="name" placeholder="Ex: John Doe, sexycat67..." required value="<?php echo isset($_GET['name'])?$_GET['name']:""; ?>">
+						<input type="text" class="form-control" id="display-name" name="name" placeholder="Ex: John Doe" required value="<?php echo isset($_GET['name'])?$_GET['name']:""; ?>">
 						<div class="help-block with-errors"></div>
 					</div>
 					
@@ -78,7 +78,8 @@
 					
 					<div class="form-group">
 						<label for="location">Town/City</label>
-						<input type="text" name="location" class="form-control" id="inputlocation" placeholder="North Battleford" required value="<?php echo isset($_GET['loc'])?$_GET['loc']:""; ?>">
+						<input type="text" name="location" class="form-control" id="inputlocation" placeholder="North Battleford" data-error="Please fill out this field" required value="<?php echo isset($_GET['loc'])?$_GET['loc']:""; ?>">
+						<div class="help-block with-errors"></div>
 					</div>
 					
 					<div class="form-group">
@@ -95,7 +96,7 @@
 					
 					
 					<input type="hidden" name="switch" value="index.php">
-					<button type="submit" form="form" formaction="/php/register.php" formmethod="post" class="btn btn-default">Submit</button>
+					<button type="submit" form="form" formaction="/php/register.php" formmethod="post" class="btn btn-info btn-lg center">Submit</button>
 				</form>
 			</div>
   		</div>

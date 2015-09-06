@@ -41,9 +41,8 @@ class businessDisplay{
 			foreach($result as $doc){
 				if($doc['active'] == "true"){
 					$HTML .= 
-					'<h4>Name: <small>'.$doc['name'].'</small></h4>
-					<p>'.$doc['description'].'</p>
-					<h4><a href="businessdeal.php?d='.$doc['_id'].'">View Deal</a></h4>';
+					'<h4><a href="businessdeal.php?d='.$doc['_id'].'">'.$doc['name'].'</a></h4>
+					<p>'.$doc['description'].'</p>';
 				}
 			}
 			$this->dealInfoByBusiness = $HTML;

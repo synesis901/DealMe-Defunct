@@ -35,7 +35,7 @@
 				-->
 			</div>
 		</div>
-		<p class="text-center">Copyright 2015 by DealMe, Inc.</p>
+		<p class="text-center">Copyright 2015 by Findr, Inc.</p>
 	</div>
 </footer>
 </body>

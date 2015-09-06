@@ -59,18 +59,18 @@ class SearchResults
       				</div>
       				<div class="modal-body">
 						<div class="row">
-							<!-- for later <div class="googleMapsModal col-sm-4" id="googleMapsModal"></div> -->
+							<!-- have to make all the code dynamic into one modal instead of making modals <div class="googleMapsModal col-sm-4" id="googleMapsModal"></div> -->
 							<div class="col-sm-4"><img src="/images/business/'.$doc['_id'].'-lg.jpg" class="img-thumbnail img-modal-md" alt="'.$doc['name'].' Logo"/></div>
 							<div class="col-sm-offset-1 col-sm-6">
 								<p>'.$doc['modal_desc'].'</p>
-								<h4><small>Location: </small>'.$doc['full_address'].'</h4>
-								<h4><small>Phone: </small>'.$doc['phone'].'</small></h4>
-								<h4><small>Email: </small>'.$doc['email'].'</small></h4>
+								<h4>'.$doc['full_address'].'</h4>
+								<h4>'.$doc['phone'].'</small></h4>
+								<h4>'.$doc['email'].'</small></h4>
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-sm-11">
-      							<p class="text-right"><a href="business/businessdeal.php?b='.$doc['_id'].'">Business Page Link</a></p>
+							<div class="col-md-offset-5">
+      							<a class="btn btn-info btn-lg" href="business/businessdeal.php?b='.$doc['_id'].'">Business Page Link</a>
 							</div>
       					</div>
 					</div>
@@ -79,7 +79,10 @@ class SearchResults
       				</div>
     			</div>
   			</div>
-		</div>';
+		</div>
+		<!-- <script type="text/javascript">
+		locationArray['.$hold.'] = {"lat":'.$doc['location']['lat'].',"lng":'.$doc['location']['lng'].'};
+		</script>-->';
 		$hold++;
 		}
 	}

@@ -2,7 +2,7 @@
 	include($_SERVER['DOCUMENT_ROOT']."/php/Classes/Main/class.php");
 	include($_SERVER['DOCUMENT_ROOT']."/php/loginCheck.php");
 	include ($_SERVER['DOCUMENT_ROOT']."/php/header.php");
-	echo "DealMe";
+	echo "Findr";
 	include ($_SERVER['DOCUMENT_ROOT']."/php/preload.php");
 	echo "<link rel='stylesheet' type='text/css' href='/css/admin.css'>";
 	echo "<script src='admin.js'></script>";

@@ -17,3 +17,21 @@
 .input-group .form-control{
 	width: 100%;
 }
+
+#Adv-Search {
+	padding: 20px 0px;
+	background-color: rgba(255,255,255,0.5);
+}
+
+/* These need to be custom designed divs later, not browser generated */
+#Adv-Search label {
+	font-size: 18pt;
+}
+
+#Adv-Search input[type='checkbox'] {
+	/*background-image:height: 100px; width: 100px;*/
+}
+
+#Adv-Search input[type='checkbox']:checked{
+	/*background-image:*/
+}
