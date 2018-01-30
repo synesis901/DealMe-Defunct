@@ -1,2 +1,0 @@
-# DealMeMVP
-MVP for DealMe
