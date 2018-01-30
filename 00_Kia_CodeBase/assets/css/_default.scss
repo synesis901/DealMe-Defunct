@@ -1,0 +1,371 @@
+/* --------------------------------- panels */
+.navigation-area{
+	position: fixed;
+	height: 100%;
+	width: (50/18)*1em;
+	padding: 0.5em 0;
+	color: white;
+	background: $dark;
+	font-size: (18/16)*1em;
+	pointer-events: none;
+	z-index: 100;
+    nav li {
+        pointer-events: auto;
+    }
+}
+.main-site-area {
+	position: fixed;
+	left: 0;
+	width: calc(100% - (50/16)*1em);
+	height: 100%;
+	background: $bg;
+	margin-left: (50/16)*1em;
+	transition: 0.5s all ease;
+	overflow-y: auto;
+	z-index: 10;
+}
+
+
+/* --------------------------------- Header */
+header {
+	display: none;
+	transition: 0.5s all ease;
+}
+h1 {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	font-size: (18/16)*1em;
+	line-height: (24/18)*1em;
+	text-transform: uppercase;
+	a, a:link, a:visited{
+		color: $off-white;
+		text-decoration: none;
+	}
+	a:hover, a:active{
+		color: $red;
+		text-decoration: none;
+	}
+}
+.logo {
+	display: inline-block;
+	padding: 1em 0.66667em;
+	font-size: (24/18)*1em;
+	color: inherit;
+}
+
+/* -------------------------- Navigation */ //1em is now equal to 18px not 16px
+.button-primary-nav-toggle {
+	float: left;
+	padding: 0.5em 0;
+	font-size: (28/18)*1em;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	width: 100%;
+	&:hover {
+		color: $bg;
+	}
+}
+.nav-label{
+	display: none;
+}
+nav li {
+	width: (50/18)*1em;
+	.tooltip{
+		display: none;
+		visibility: hidden;
+	}
+	&.active a{
+		border-radius: (3/18)*1em;
+		background: white;
+		position: relative;
+		color: $red;
+		z-index: 1000;
+		&:link, &:visited{
+			color: $red;
+		}
+		&:hover, &:active{
+			color: $info;
+		}
+		&:before{
+			content: '';
+			display: block;
+			transform: rotate(-45deg);
+		    -ms-transform: rotate(-45deg);
+		    -webkit-transform: rotate(-45deg);
+		    -o-transform: rotate(-45deg);
+		    -moz-transform: rotate(-45deg); 
+		    background-color:white;
+		    width:(35/18)*1em;
+		    height:(35/18)*1em;
+		    top: (5/18)*1em;
+		    left: (31/18)*1em;
+		    position:absolute;
+		    -moz-border-radius: (5/18)*1em;
+		    border-radius: (5/18)*1em;
+		    z-index: -100;
+			box-shadow: ((1/18)* 1em) ((2/18)* 1em) ((2/18)*1em) ((2/18)* -1em) rgba(130,130,130, 0.75);
+		}
+	}
+}
+nav li button {
+	background: transparent;
+	border: none;
+	outline: none;
+}
+.nav-divider{
+	border-bottom: 1px solid white;
+	margin: (10/18)*1em;
+	width: (30/18)*1em;
+}
+body.is-nav-state{
+	.button-primary-nav-toggle{
+		margin: 0 0.4em;
+		width: (30/18)*1em;
+		text-align: center;
+		font-size: (28/14)*1em;
+		line-height: 1.5;
+	}
+	nav li {
+		width: 100%;
+		text-align: left;
+		text-transform: uppercase;
+		font-size: (14/18)*1em;
+		line-height: (27/14)*1em;
+		.fa:not(.fa-bars) {
+			width: (30/18)*1em;
+			text-align: center;
+			font-size: (18/14)*1em;
+		}
+		&.active a{
+			&:before{
+				right: (16/14)* -1em;
+				left: auto;
+				width:(34/14)*1em;
+			    height:(34/14)*1em;
+			    top: (5/14)*1em;
+			    position:absolute;
+			    -moz-border-radius: (5/14)*1em;
+			    border-radius: (5/14)*1em;
+				box-shadow: ((1/14)* 1em) ((2/14)* 1em) ((2/14)*1em) ((2/14)* -1em) rgba(130,130,130, 0.75);
+			}
+		}
+		button{
+			text-align: left;
+			text-transform: uppercase;
+		}
+	}
+	nav a, nav button:not(.button-primary-nav-toggle){
+		padding: ((9/14)*1em) ((18/14)*1em);
+	}
+	.main-site-area{		left: 80%;
+		margin-left: 0;
+	}
+	.nav-label{
+		display: inline-block;
+	}
+	.nav-divider{
+		width: calc(100% - ((10/18)*1em));
+	}
+
+}
+/* --------------------------------- body content */
+main {
+	z-index: 50;
+	position: relative;
+}
+p {
+	box-sizing: border-box;
+	/*font-family: "Redacted";*/
+	font-size: (20/16)*1em;
+	line-height: (30/20)*1em;
+	// padding: 0.5em;
+	margin: 0;
+}
+.section1, .section2, .section3 {
+	clear: both;
+}
+h2{
+	margin: 0 0 ((10/28)*1em) 0;
+}
+.btn {
+	border-radius: (3/16)*1em;
+	margin: 0 (5/16)*1em;
+	display:inline-block;
+	padding: (5/16)*1em (20/16)*1em;
+	background: $info;
+	color: $off-white;
+	box-shadow: ((1/16)*1em) ((1/16)*1em) ((1/16)*1em) rgba(130,130,130, 0.5);
+	border: none;
+	outline: none;
+	&:link, &:visited{
+		color: $off-white;
+	}
+	&:hover, &:active{
+		color: $dark;
+		box-shadow: ((1/16)*1em) ((1/16)*1em) ((1/16)*1em) 0 rgba(175,175,175, 0.2);
+	}
+}
+h3{
+	position: relative;
+	.heading{
+		display: inline-block;
+		margin-right: (5/16)*1em;
+	}
+	.btn {
+		font-size: 0.7em;
+		display: inline-block;
+		padding: (3/16)*1em (20/16)*1em;
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+@media(min-width:420px){
+	h3 .btn{
+		float: right;
+	}
+}
+.section3 {
+	margin-top: (20/16)*1em;
+}
+.active .tooltip{
+	&.bottom, &.top{
+		.tooltip-inner{
+			background-color: $info;
+		}
+	}
+	&.top .tooltip-arrow{
+		border-top-color: $info;
+	}
+	&.bottom .tooltip-arrow{
+		border-bottom-color: $info;
+	}
+}
+
+/* ------------------------ Contact Page */
+form {
+	width: 100%;
+}
+input, textarea {
+	font-size: (18/16)*1em;
+	line-height: (20/18)*1em;
+	width: 100%;
+	border-radius: (3/16)*1em;
+	border: 1px solid #ccc;
+	padding: (5/16)*1em;
+	margin: 0 ((10/18)*1em) ((10/18)*1em) ((10/18)*1em);
+	background: white;
+	box-shadow: inset ((1/12)*1em) ((1/12)*1em) ((1/12)*1em) rgba(175, 175, 175, 0.25);
+	border: 1px solid darken(white, 15%);
+}
+textarea{
+	max-width: 100%;
+	min-width: 100%;
+	min-height: 5em;
+}
+
+.people {
+	width: 100%;
+	font-size: 1.1em;
+}
+
+/* ------------------------- Login Page */
+.login {
+	width: 100%;
+	text-align: center;
+	form.login-form {
+		width: 100%;
+		border: 1px solid darken(white, 5%);
+		padding: (15/16)*1em;
+		background: white;
+		border-radius: (3/16)*1em;
+		text-align: left;
+		box-shadow: ((1/16)*1em) ((1/16)*1em) ((1/16)*1em) rgba(175, 175, 175, 0.25);
+		input, button, p{
+			width: 100%;
+			margin: 0 0 ((10/16)*1em) 0;
+			font-size: 0.8em;
+			padding: ((10/16)*1em) ((20/16)*1em);
+		}
+		input{
+			background: $off-white;
+			border: 1px solid darken($off-white, 5%);
+		}
+		p, button{
+			text-transform: uppercase;
+		}
+		p{
+			font-size: 0.7em;
+			padding-left: 0;
+		}
+	}
+}
+
+
+/*------------------------------------ Deals/Dealers Page */
+.sidebar {
+	clear: both;
+	border-radius: 2px;
+	background: $info;
+	color: white;
+	padding: (10/16)*1em;
+	margin-left: 0;
+	width: 100%;
+	margin-bottom: (20/16)*1em;
+	ul {
+		list-style-type: none;
+		padding: 0;
+		-webkit-column-count: 1;
+	    -moz-column-count: 1;
+	    column-count: 1;
+	}
+	input{
+		margin-right: 0;
+		margin-left: 0;
+		color: #888;
+	}
+	::-webkit-input-placeholder::before {
+		font-family: fontAwesome; 
+		content:'\f002  '; 
+	}
+	::-moz-placeholder::before  {
+		font-family: fontAwesome; 
+		content:'\f002  '; 
+	} /* firefox 19+ */
+	:-ms-input-placeholder::before  {
+		font-family: fontAwesome; 
+		content:'\f002  '; 
+	} /* ie */
+	input:-moz-placeholder::before  {
+		font-family: fontAwesome; 
+		content:'\f002  '; 
+	}
+}
+.map-btn, .list-btn {
+	margin-bottom: (10/16)*1em;
+	float: left;
+	margin-left: 0;
+}
+.map-btn{
+	margin-right:(10/16)*1em;
+}
+.dealers.list-view{
+	width: 100%;
+	clear: both;
+}
+.map-view{
+	width: 100%;
+	padding-top: 100%;
+	position: relative;
+}
+#map_canvas { 
+	position: absolute;
+	top:0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	box-shadow: ((1/16)*1em) ((1/16)*1em) ((1/16)*1em) rgba(175, 175, 175, 0.25);
+}
+
+

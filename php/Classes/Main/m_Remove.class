@@ -1,0 +1,23 @@
+<?php
+/*
+	DealMe Save class for Mongo Save Method
+*/
+
+class m_Remove extends m_Connection{
+
+	/*
+		protect this static class from instantiation
+	*/
+	private function __clone(){}
+	private function __wakeup(){}
+	protected function __construct(){}
+	
+	/*
+		Methods
+	*/
+	public static function result($database,$collection,$query,$justOne=false){
+		$justOneArray = array('justOne' => $justOne);
+		return parent::connection()->$database->$collection->remove($query,$justOneArray);
+	}
+}
+?>

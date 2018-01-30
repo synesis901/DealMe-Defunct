@@ -1,0 +1,24 @@
+<?php
+/*
+	DealMe Save class for Mongo Save Method
+	Example:
+	m_Save::result(m_var::get_database(),m_var::get_userAccount(),$array);
+*/
+
+class m_Save extends m_Connection{
+
+	/*
+		protect this static class from instantiation
+	*/
+	private function __clone(){}
+	private function __wakeup(){}
+	protected function __construct(){}
+	
+	/*
+		Methods
+	*/
+	public static function result($database,$collection,$array){
+		return parent::connection()->$database->$collection->save($array);
+	}
+}
+?>

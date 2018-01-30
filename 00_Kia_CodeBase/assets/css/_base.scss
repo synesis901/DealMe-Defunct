@@ -1,0 +1,58 @@
+* {
+	box-sizing: border-box;
+}
+html {
+	height: 100%;
+	font-size: 100%;
+	line-height: 1.5;
+}
+h1{ font-size: (24/16)*1em; }
+h2{ font-size: (28/16)*1em; }
+h3{ font-size: (24/16)*1em; }
+h4{ font-size: (20/16)*1em; }
+h5{ font-size: (18/16)*1em; }
+h6{ font-size: (16/16)*1em; }
+h1, h2, h3, h4, h5, h6, nav ul{
+	font-family: "Lato", sans-serif;
+}
+body {
+	min-height: 100%;
+	background: $bg;
+	// font-family: "Montserrat";
+	font-family: "Josefin Sans", sans-serif;
+}
+nav ul, nav ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+nav a, nav button {
+	display: inline-block;
+	width: 100%;
+	padding: ((9/18)*1em) 0;
+	color: inherit;
+	text-decoration: none;
+	&:link, &:visited {
+		color: inherit;
+	}
+	&:hover, &:active {
+		color: $red;
+	}
+}
+nav li {
+	text-align: center;
+}
+header {
+	background: $dark;
+	color: white;
+}
+main {
+	padding: 1.5em 1em 1.5em 2em;
+}
+a, a:link, a:visited {
+	text-decoration: none;
+	color: $red;
+}
+a:hover, a:active{
+	color: $info;
+}

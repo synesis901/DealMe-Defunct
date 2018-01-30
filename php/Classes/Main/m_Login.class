@@ -1,0 +1,69 @@
+<?php
+/*
+	DealMe stuff
+	Debug:
+		!!!Must change $_SESSION info cause it's holding the whole array!
+		Think of a better way!!!
+*/
+
+class m_Login {
+	/*
+		Properties
+	*/
+	private $redirect;
+	
+	/*
+		Methods
+	*/
+	public static function login($user,$password){
+		$_SESSION['login'] = "";
+		$info = self::validate($user,$password);
+		if($info){
+			if($info['valid'] != "true"){
+				return "Account Not Verified. Check E-Mail.";
+			}
+			//Login Session -- change info
+			$_SESSION['login'] = $info["_id"];
+			m_Update::result(m_var::get_database(),m_var::get_userAccount(),array('_id'=>$info['_id']),array('$set'=>array('lastlogin'=>getdate())));
+			return "Logged In";
+		}else{
+			return "User and Pass didn't work";
+		}
+	}
+	
+	private static function validate($user,$pass){
+		$hold = m_FindOne::result(m_var::get_database(),m_var::get_userAccount(),array('_id' => $user));
+		if( $hold == NULL){
+			return false;
+		}else{
+			if(password_verify($pass,$hold['password'])){
+				return $hold;
+			}else{
+				return false;
+			}
+		}
+	}
+	
+	private static function checkPass($pass){
+		if(m_FindOne::result(m_var::get_database(),m_var::get_userAccount(),array('_id'=>$username)) == NULL){
+			$this->accountProperties['_id'] = $username;
+		}else{
+			$this->error("usertaken");
+		}
+	}
+	
+	public static function logout(){
+		$_SESSION['login'] = "";
+	}
+	
+	public static function check(){
+		if($_SESSION['login'] != ""){
+			return "true";
+		}else{
+			return "false";
+		}
+	}
+	
+}
+
+?>

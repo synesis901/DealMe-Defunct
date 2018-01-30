@@ -1,0 +1,39 @@
+<?php
+/*
+	Verifies Recently Registered users email address for DealMe
+	
+	Syntax:
+	$foo = new m_Verify((isset($_GET['v']))?intval($_GET['v']):false);
+	echo $foo->result();
+*/
+
+class m_Verify {
+	/*
+		Properties
+	*/
+		private $error = "";
+	
+	/*
+		Methods
+	*/
+	public function __construct($v){
+		if($v != false){
+			$hold = m_FindOne::result(m_var::get_database(),m_var::get_userAccount(),array('valid'=>$v));
+			
+			if(empty($hold['_id'])){
+				$this->error = "Error: Verification Key was Invalid. Email the site admin.";
+			}else{
+				$collection->update(array('_id' => $hold['_id']),array('$set' => array('valid' => true)));
+				$this->error = "Thank you for validating your email, ".$hold['_id'].". Your Account is now active.";
+			}
+		}else{
+			$this->error = "Error: No Verification data detected. Contact Admin. <a href='login.php'>Click Here</a> to login.";
+		}
+	}
+	
+	private function result(){
+		return $this->error;
+	}
+}
+
+?>
